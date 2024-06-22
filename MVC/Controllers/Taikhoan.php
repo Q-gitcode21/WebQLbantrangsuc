@@ -23,7 +23,10 @@
             $kq1=$this->taikhoan->checktrungid($id);
             
             if($kq1){
-                echo'<script>alert("Trùng ID")</script>';
+                echo'<script>alert("Trùng ID");
+                window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Taikhoan";
+                </script>';
+                
             }
             else{
                     // gọi hàm chèn dl taikhoan_ins trong model tacgia_m
@@ -41,18 +44,30 @@
                 echo'<script>alert("Thêm mới thất bại")</script>';
             }
            
-            // gọi lại giao diện
-            // $this->view('Masterlayout',[
-            //     'page'=>'Taikhoan_them',
-            //     'id'=> $id,
-            //     'email'=>$email,
-            //     'tendn'=> $tdn,
-            //     'matkhau'=> $mk,
-            //     'ngaytao'=> $nt,
-                
-            // ]);
+           
         }
     }
+    function upload(){
+  
+        $file=$_FILES['txtFile']['tmp_name'];
+            $objReader=PHPExcel_IOFactory::createReaderForFile($file);
+            $objExcel=$objReader->load($file);
+            //Lấy sheet hiện tại
+            $sheet=$objExcel->getSheet(0);
+            $sheetData=$sheet->toArray(null,true,true,true);
+            for($i=2;$i<=count($sheetData);$i++){
+                $id=$sheetData[$i]["A"];
+                $email=$sheetData[$i]["B"];
+                $tdn=$sheetData[$i]["C"];
+                $mk=$sheetData[$i]["D"];
+                $nt=$sheetData[$i]["E"];
+                $this->taikhoan->taikhoan_ins($id,$email,$tdn,$mk,$nt);
+            }
+            echo '<script>
+                alert("Thêm mới thành công");
+                window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSTaikhoan";
+                </script>';
+        }
     
  }
  ?>

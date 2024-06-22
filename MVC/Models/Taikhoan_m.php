@@ -26,7 +26,7 @@ class Taikhoan_m extends connectDB{
         }
         // trường hợp tìm kiếm
          else {
-            $sql = "SELECT * FROM taikhoan WHERE Id LIKE '%$id%' OR Tendn LIKE '%$tdn%'";
+            $sql = "SELECT * FROM taikhoan WHERE Id LIKE '%$id%' AND Tendn LIKE '%$tdn%'";
         }
        
         return mysqli_query($this->con,$sql);

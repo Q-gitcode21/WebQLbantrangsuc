@@ -36,7 +36,10 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+.btn_cn {
+    display: flex;
+    margin: 0;
+}
 main.table {
     width: 82vw;
     height: 90vh;
@@ -61,7 +64,7 @@ main.table {
 }
 
 .table__header .input-group {
-    width: 35%;
+    width: 15%;
     height: 100%;
     background-color: #fff5;
     padding: 0 .8rem;
@@ -75,7 +78,7 @@ main.table {
 }
 
 .table__header .input-group:hover {
-    width: 45%;
+    width: 15%;
     background-color: #fff8;
     box-shadow: 0 .1rem .4rem #0002;
 }

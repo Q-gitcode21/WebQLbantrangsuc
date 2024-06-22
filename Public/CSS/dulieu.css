@@ -124,24 +124,25 @@
     font-weight: 500;
 }
 
-a:link {
+.the-a {
     color: black;
-     text-decoration: none;
-  }
-  
-  /* visited link */
-  a:visited {
+    text-decoration: none;
+}
+
+/* visited link */
+.the-a:visited {
     color: green;
-  }
-  
-  /* mouse over link */
-  a:hover {
+}
+
+/* mouse over link */
+.the-a:hover {
     color: red;
-  }
-  
-  /* selected link */
-  a:active {
+}
+
+/* selected link */
+.the-a:active {
     color: blue;
-  }
+}
+
 
 

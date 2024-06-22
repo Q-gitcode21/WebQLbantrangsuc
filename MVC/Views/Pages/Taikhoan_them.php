@@ -11,7 +11,7 @@
     padding-top: 5px;
 }
     </style>
-    <link rel="stylesheet" href="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Public/CSS/dulieu.css">
+    <link rel="stylesheet" href="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Public/CSS/dulieu.css?v=<?php echo time();?>">
 </head>
 <body>
     <form id="myForm" method="post" action="./Taikhoan/themmoi">
