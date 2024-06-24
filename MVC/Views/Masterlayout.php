@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sidebar With Bootstrap</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <title>Web quản lý bán hàng</title>
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -25,7 +26,7 @@
             </div>
             <ul class="sidebar-nav">
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
+                    <a href="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Trangchu" class="sidebar-link">
                         <i class="lni lni-home"></i>
                         <span>Trang chủ</span>
                     </a>
@@ -45,11 +46,11 @@
                         </li>
 
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Quản lý nhân viên</a>
+                            <a href="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSNhanvien" class="sidebar-link">Quản lý nhân viên</a>
                         </li>
 
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Quản lý khách hàng</a>
+                            <a href="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSkhachhang" class="sidebar-link">Quản lý khách hàng</a>
                         </li>
                     </ul>
                 </li>
@@ -63,19 +64,19 @@
                     <ul id="QLSP-DV" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
 
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Quản lý danh mục</a>
+                            <a href="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSDanhmuc" class="sidebar-link">Quản lý danh mục</a>
                         </li>
 
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Quản lý sản phẩm</a>
+                            <a href="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSSanpham" class="sidebar-link">Quản lý sản phẩm</a>
                         </li>
 
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Quản lý tin tức</a>
+                            <a href="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DStintuc" class="sidebar-link">Quản lý tin tức</a>
                         </li>
 
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Quản lý khuyến mãi</a>
+                            <a href="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSkhuyenmai" class="sidebar-link">Quản lý khuyến mãi</a>
                         </li>
                     </ul>
                 </li>
@@ -89,11 +90,11 @@
                     <ul id="QLGD-DH" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
 
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Đặt hàng</a>
+                            <a href="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSDathang" class="sidebar-link">Đặt hàng</a>
                         </li>
 
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Đơn hàng</a>
+                            <a href="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSDonhang" class="sidebar-link">Đơn hàng</a>
                         </li>
 
                         <li class="sidebar-item">
@@ -105,7 +106,7 @@
                         </li>
 
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Nhập hàng</a>
+                            <a href="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSNhaphang" class="sidebar-link">Nhập hàng</a>
                         </li>
                     </ul>
                 </li>

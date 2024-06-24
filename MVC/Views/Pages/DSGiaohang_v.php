@@ -35,7 +35,7 @@
             <button style="border: none; background: transparent;" type="submit" name="btnTimkiem"><i class="fa fa-search" ></i></button>
             </form>
             <div class="Insert">
-                <form action="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Giaohang" method="post">
+                <form action="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSDonhang" method="post">
                 <button class="button-85" role="button">Thêm đơn</button>
                 </form>
             

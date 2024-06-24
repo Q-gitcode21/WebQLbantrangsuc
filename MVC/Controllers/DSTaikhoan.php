@@ -37,12 +37,12 @@
         $sheet=$objExcel->getActiveSheet()->setTitle('DSLS');
         $rowCount=1;
         //Tạo tiêu đề cho cột trong excel
-        $sheet->setCellValue('A'.$rowCount,'STT');
-        $sheet->setCellValue('B'.$rowCount,'Id');
-        $sheet->setCellValue('C'.$rowCount,'Email');
-        $sheet->setCellValue('D'.$rowCount,'Tendn');
-        $sheet->setCellValue('E'.$rowCount,'Matkhau');
-        $sheet->setCellValue('F'.$rowCount,'Ngaytao');
+        
+        $sheet->setCellValue('A'.$rowCount,'Id');
+        $sheet->setCellValue('B'.$rowCount,'Email');
+        $sheet->setCellValue('C'.$rowCount,'Tendn');
+        $sheet->setCellValue('D'.$rowCount,'Matkhau');
+        $sheet->setCellValue('E'.$rowCount,'Ngaytao');
     
         //định dạng cột tiêu đề
         $sheet->getColumnDimension('A')->setAutoSize(true);
@@ -50,24 +50,23 @@
         $sheet->getColumnDimension('C')->setAutoSize(true);
         $sheet->getColumnDimension('D')->setAutoSize(true);
         $sheet->getColumnDimension('E')->setAutoSize(true);
-        $sheet->getColumnDimension('F')->setAutoSize(true);
         //gán màu nền
-        $sheet->getStyle('A1:F1')->getFill()->setFillType(\PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setRGB('00FF00');
+        $sheet->getStyle('A1:E1')->getFill()->setFillType(\PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setRGB('00FF00');
         //căn giữa
-        $sheet->getStyle('A1:F1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+        $sheet->getStyle('A1:E1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
         //Điền dữ liệu vào các dòng. Dữ liệu lấy từ DB
         $id=$_POST['txtTKID'];
         $tdn=$_POST['txtTKTen']; // lay du lieu nhap tu txt              
         $data=$this->dstk->taikhoan_find($id,$tdn);
-        $i=1;
+       
         while($row=mysqli_fetch_array($data)){
             $rowCount++;
-            $sheet->setCellValue('A'.$rowCount,$i++);
-            $sheet->setCellValue('B'.$rowCount,$row['Id']);
-            $sheet->setCellValue('C'.$rowCount,$row['Email']);
-            $sheet->setCellValue('D'.$rowCount,$row['Tendn']);
-            $sheet->setCellValue('E'.$rowCount,$row['Matkhau']);
-            $sheet->setCellValue('F'.$rowCount,$row['Ngaytao']);
+           
+            $sheet->setCellValue('A'.$rowCount,$row['Id']);
+            $sheet->setCellValue('B'.$rowCount,$row['Email']);
+            $sheet->setCellValue('C'.$rowCount,$row['Tendn']);
+            $sheet->setCellValue('D'.$rowCount,$row['Matkhau']);
+            $sheet->setCellValue('E'.$rowCount,$row['Ngaytao']);
             
            
            
@@ -81,7 +80,7 @@
                 )
             )
             );
-        $sheet->getStyle('A1:'.'F'.($rowCount))->applyFromArray($styleAray);
+        $sheet->getStyle('A1:'.'E'.($rowCount))->applyFromArray($styleAray);
         $objWriter=new PHPExcel_Writer_Excel2007($objExcel);
         $fileName='ExportExcel.xlsx';
         $objWriter->save($fileName);

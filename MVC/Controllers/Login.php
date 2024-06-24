@@ -34,7 +34,9 @@ class Login extends controller{
                {
                    
                     $_SESSION['Id']=$id;
-                    $this->view('Masterlayout');
+                    $doanhthu=$this->Login->doanhthungay();
+                    
+                    $this->view('Masterlayout',['page'=>'Trangchu_v', 'dulieu'=>$doanhthu]);
                     $result_mess=true;
                }
                else

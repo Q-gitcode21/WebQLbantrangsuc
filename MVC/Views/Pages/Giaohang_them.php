@@ -22,22 +22,20 @@
     <link rel="stylesheet" href="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Public/CSS/dulieu.css?v=<?php echo time();?>">
     <style>
       .content{
-        width: 600px;
+        width: 550px;
         margin:10px;
-        height: 700px;
+        height: 600px;
         
       }
       .input-box input{
-        width : 500px;
+        width : 100%;
       }
       
     </style>
 </head>
 <body>
    
-    <div class="DT">
-     <!-- include_once 'DSGiaohang_v.php'; -->
-    </div>
+    
     <form id="myForm" method="post" action="./Giaohang/themmoi">
     <div class="content">
     <div  class="form-box login">
@@ -49,25 +47,15 @@
                 <span class="icon">
                     <img src="./Public/Picture/id-card_9424609.png" alt="" width="15px">
                     </span>
-                    <select name="selectMadonhang" class="dd4">
-                      <option value="">Chọn mã đơn hàng</option>
-                      <?php 
-                     
-                    if(isset($data['getMdh']) && mysqli_num_rows($data['getMdh']) > 0){
-                      
-                        while($r1 = mysqli_fetch_assoc($data['getMdh'])){
-                            echo '<option value="' . $r1['Madonhang'] . '">' . $r1['Madonhang'] . '</option>';
-                        }
-                    } else {
-                        echo '<option value="">Không có đơn hàng</option>';
-                    }
-                    ?>
-                  </select>
+                    <input style="padding: 0px 5px 0px 200px;" name="selectMadonhang" type="text" id="madonhangInput" readonly>
+                    <label >Mã đơn hàng</label>
+
+
                     
                 </div>
                 <div class="input-box">
                     
-                    <input style="padding: 0px 5px 0px 200px;" type="date" required name="txtNgaydathang" value="<?php if(isset($data['Ngaydathang'])) echo $data['Ngaydathang']?>">
+                    <input style="padding: 0px 5px 0px 200px;" type="date" required name="txtNgaydathang" id="ngaydathangInput" readonly >
                     <label>Ngày đặt hàng</label>
                 </div>            
                 <div class="input-box">

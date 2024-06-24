@@ -45,5 +45,6 @@ class Giaohang_m extends connectDB{
         return mysqli_query($this->con,$sql);
     }
     
+    
 }
 ?>

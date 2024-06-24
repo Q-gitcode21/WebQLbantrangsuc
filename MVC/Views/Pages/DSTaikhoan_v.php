@@ -93,7 +93,7 @@
                                                 <button class="button-85"  role="button">Sửa</button> &nbsp;
                                             </form>
                                                <form action="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSTaikhoan/xoa/<?php echo $row['Id']?>" method="post">
-                                                <button class="button-85 custom-delete-button" onclick="return confirm('Bạn có chắc muốn xóa')" role="button" >Xóa</button>
+                                                <button class="button-85 " onclick="return confirm('Bạn có chắc muốn xóa')" role="button" >Xóa</button>
                                                </form>
                                             </td>
                                         </tr>

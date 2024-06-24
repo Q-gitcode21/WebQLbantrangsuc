@@ -2,6 +2,8 @@
     justify-content: center;
     align-items: center;
     display: flex;
+    background: url(../Picture/imagesDT/nenLogin.jpg) ;
+    background-size: cover;
 }
 .content{
     position: relative;   

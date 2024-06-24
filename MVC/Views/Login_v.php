@@ -10,6 +10,13 @@
         .content{
             margin-top: 70px;
         }
+        .formDangnhap{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+                }
     </style>
     
 </head>
@@ -22,10 +29,8 @@
     <div class="formDangnhap">
         <!-- <span class="close">&times;</span> -->
         <form method="post" action="./Login/dangnhap">
-        <div style="background-color: aqua;" class="content" >
-        <span class="icon-close">
-            <img src="./Public/Picture/Pic_login/close.png" alt="" width="20px">
-        </span>
+        <div style="background-color:white;" class="content" >
+        
         <div class="form-box login">
             <h2>Đăng nhập</h2>
             <?php

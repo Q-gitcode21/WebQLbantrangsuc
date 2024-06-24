@@ -31,8 +31,10 @@
             $kq1=$this->giaohang->checktrungma($mdh);
             
             if($kq1){
-                echo'<script>alert("Trùng Mã đơn hàng")</script>';
-                $this->view('Masterlayout',['page'=>'Giaohang_them']);
+                echo '<script>
+                alert("Trùng mã đơn hàng");
+                window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSDonhang";
+                </script>';
             }
             else{
                      // gọi hàm chèn dl giaohang_ins trong model tacgia_m
@@ -40,7 +42,7 @@
             if($kq){
                 echo '<script>
                 alert("Thêm mới thành công");
-                window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Giaohang";
+                window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSGiaohang";
                 </script>';
                 // hiện thị alert trc khi chuyển trang
             exit();
