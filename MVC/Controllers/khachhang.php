@@ -13,25 +13,22 @@
     }
     function themmoi(){
         if(isset($_POST['btnLuu'])){
-            $makhachhang=$_POST['txtmakhachhang'];
+            
             $tenkhachhang=$_POST['txttenkhachhang'];
             $gioitinh=$_POST['txtgioitinh'];
             $diachi=$_POST['txtdiachi'];
             $sdt=$_POST['txtsdt'];
             $ngaysinh=$_POST['datengaysinh'];
             
-            // Kiem tra trung id
-            $kq1=$this->khachhang->checktrungid($makhachhang);
+          
             
-            if($kq1){
-                echo'<script>alert("Trùng ID")</script>';
-            }
-            else{
+           
+            
                     // gọi hàm chèn dl khachhang_ins trong model tacgia_m
-            $kq=$this->khachhang->khachhang_ins($makhachhang,$tenkhachhang,$gioitinh,$diachi,$sdt,$ngaysinh);
+            $kq=$this->khachhang->khachhang_ins($tenkhachhang,$gioitinh,$diachi,$sdt,$ngaysinh);
             if($kq){
                 echo '<script>
-                alert("Thêm mới thành công");
+                alert("Đăng ký thành công");
                 window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/khachhang";
                 </script>';
                 // hiện thị alert trc khi chuyển trang
@@ -47,13 +44,13 @@
             //     'page'=>'khachhang_them',
             //     'id'=> $id,
             //     'email'=>$email,
-            //     'tendn'=> $tdn,
+            //     'quyen'=> $tdn,
             //     'matkhau'=> $mk,
             //     'ngaytao'=> $nt,
                 
             // ]);
         }
-    }
+    
 
     function upload(){
   

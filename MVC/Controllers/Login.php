@@ -25,25 +25,54 @@ class Login extends controller{
                while($row = mysqli_fetch_array($kq)){
                 $id=$row['Id'];
                 $email=$row['Email'];
-                $tdn=$row['Tendn'];                
+                $quyen=$row['Quyen'];                
                 $mk=$row['Matkhau'];
                 
                
                }
                if ($mk==$mk_input)
                {
-                   
+               
                     $_SESSION['Id']=$id;
-                    $doanhthu=$this->Login->doanhthungay();
-                    
-                    $this->view('Masterlayout',['page'=>'Trangchu_v', 'dulieu'=>$doanhthu]);
-                    $result_mess=true;
+                    if ($quyen == 'Khách hàng') {
+                        // Gọi đến trang bán hàng
+                        echo '<script>
+                        alert("Đăng nhập thành công");
+                        window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD";
+                        </script>'; 
+                        $result_mess=true;                 
+                        exit();
+                    } 
+                    elseif ($quyen == 'Nhân viên') {
+                        // Gọi đến trang quản lý
+                        $doanhthu=$this->Login->doanhthungay();
+                        $this->view('Masterlayout',['page'=>'Trangchu_v', 'dulieu'=>$doanhthu]);
+                        $result_mess=true;
+                        exit();
+                    }
+                    else{
+                        echo 'Không xác định đc quyền';
+                    }
+
+                   
                }
-               else
-               {
-                $this->view('Login_v',['result'=>$result_mess]);               
+               // sai mật khẩu
+               else{
+                echo '<script>
+                alert("Sai mật khẩu");
+                window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Login";
+                </script>';   
                }
+               
             }
+            // email chưa đăng ký
+            else
+               {
+                echo '<script>
+                alert("Email chưa đăng ký");
+                window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Login";
+                </script>';           
+               }
 }
 }
 function logout(){

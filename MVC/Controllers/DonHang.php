@@ -63,17 +63,7 @@
             else
                 echo'<script>alert("Thêm mới thất bại")</script>';
             }
-           
-            // gọi lại giao diện
-            // $this->view('Masterlayout',[
-            //     'page'=>'donhang_them',
-            //     'id'=> $id,
-            //     'email'=>$email,
-            //     'tendn'=> $tdn,
-            //     'matkhau'=> $mk,
-            //     'ngaytao'=> $nt,
-                
-            // ]);
+     
         }
     }
     public function layGiaSanPham($msp) {

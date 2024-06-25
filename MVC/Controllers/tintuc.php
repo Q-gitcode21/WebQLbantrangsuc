@@ -49,7 +49,7 @@
             //     'page'=>'tintuc_them',
             //     'id'=> $id,
             //     'email'=>$email,
-            //     'tendn'=> $tdn,
+            //     'quyen'=> $tdn,
             //     'matkhau'=> $mk,
             //     'ngaytao'=> $nt,
                 

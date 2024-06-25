@@ -16,15 +16,15 @@
         if(isset($_POST['btnTimkiem'])){
            
             $id=$_POST['txtTKID'];
-            $tdn=$_POST['txtTKTen']; // lay du lieu nhap tu txt  
+            $quyen=$_POST['txtTKQuyen']; // lay du lieu nhap tu txt  
             
-            $dl=$this->dstk->taikhoan_find($id,$tdn); // goi ham tim kiem
+            $dl=$this->dstk->taikhoan_find($id,$quyen); // goi ham tim kiem
             // goi lai giao dien render lại trang va truyen $ dl ra 
             $this->view('Masterlayout',[
                 'page'=>'DSTaikhoan_v',
                 'dulieu'=>$dl,
                 'id'=>$id,
-                'tendn'=>$tdn
+                'quyen'=>$quyen
             ]);
            
 
@@ -40,7 +40,7 @@
         
         $sheet->setCellValue('A'.$rowCount,'Id');
         $sheet->setCellValue('B'.$rowCount,'Email');
-        $sheet->setCellValue('C'.$rowCount,'Tendn');
+        $sheet->setCellValue('C'.$rowCount,'Quyen');
         $sheet->setCellValue('D'.$rowCount,'Matkhau');
         $sheet->setCellValue('E'.$rowCount,'Ngaytao');
     
@@ -49,24 +49,22 @@
         $sheet->getColumnDimension('B')->setAutoSize(true);
         $sheet->getColumnDimension('C')->setAutoSize(true);
         $sheet->getColumnDimension('D')->setAutoSize(true);
-        $sheet->getColumnDimension('E')->setAutoSize(true);
         //gán màu nền
-        $sheet->getStyle('A1:E1')->getFill()->setFillType(\PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setRGB('00FF00');
+        $sheet->getStyle('A1:D1')->getFill()->setFillType(\PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setRGB('00FF00');
         //căn giữa
-        $sheet->getStyle('A1:E1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+        $sheet->getStyle('A1:D1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
         //Điền dữ liệu vào các dòng. Dữ liệu lấy từ DB
         $id=$_POST['txtTKID'];
-        $tdn=$_POST['txtTKTen']; // lay du lieu nhap tu txt              
-        $data=$this->dstk->taikhoan_find($id,$tdn);
+        $quyen=$_POST['txtTKQuyen']; // lay du lieu nhap tu txt              
+        $data=$this->dstk->taikhoan_find($id,$quyen);
        
         while($row=mysqli_fetch_array($data)){
-            $rowCount++;
-           
+            $rowCount++;           
             $sheet->setCellValue('A'.$rowCount,$row['Id']);
             $sheet->setCellValue('B'.$rowCount,$row['Email']);
-            $sheet->setCellValue('C'.$rowCount,$row['Tendn']);
+            $sheet->setCellValue('C'.$rowCount,$row['Quyen']);
             $sheet->setCellValue('D'.$rowCount,$row['Matkhau']);
-            $sheet->setCellValue('E'.$rowCount,$row['Ngaytao']);
+
             
            
            
@@ -80,7 +78,7 @@
                 )
             )
             );
-        $sheet->getStyle('A1:'.'E'.($rowCount))->applyFromArray($styleAray);
+        $sheet->getStyle('A1:'.'D'.($rowCount))->applyFromArray($styleAray);
         $objWriter=new PHPExcel_Writer_Excel2007($objExcel);
         $fileName='ExportExcel.xlsx';
         $objWriter->save($fileName);
@@ -119,12 +117,12 @@
         if(isset($_POST['btnLuu'])){
             $id=$_POST['txtId'];
             $email=$_POST['txtEmail'];
-            $tdn=$_POST['txtTendangnhap'];
+            $quyen=$_POST['txtQuyen'];
             $mk=$_POST['txtMatkhau'];
-            $nt=$_POST['dateNgaytao'];
+           
             
                     // gọi hàm chèn dl tacgia_ins trong model tacgia_m
-            $kq=$this->dstk->taikhoan_upd($id,$email,$tdn,$mk,$nt);
+            $kq=$this->dstk->taikhoan_upd($id,$email,$quyen,$mk);
             if($kq){
                 echo'<script>alert("Sửa thành công")</script>';
             }

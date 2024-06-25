@@ -1,24 +1,19 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <title>Ashirwaad Jewelry</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="./Public/CSS/style.css">
+    <link rel="stylesheet" href="http://localhost/Web%20qu%e1%ba%a3n%20l%c3%bd/Public/CSS/style.css">
 </head>
 
 <body>
@@ -42,60 +37,14 @@
                         <div class="col-lg-6 col-md-6">
                             <div class="top_right text-right">
                                 <ul>
-                                    <li class="language">
-                                        <a href="#">Tiếng Việt<i ></i></a>
-                                        
-                                    
                                     <li class="top_links">
-                                       <!-- Nút mở modal -->
-    <button class="btn" id="myBtn" >Đăng nhập</button>
-
-<!-- Modal -->
-<div id="myModal" class="modal">
-    <div class="modal-content">
-        <!-- <span class="close">&times;</span> -->
-        <form action="#">
-        <div style="background-color: aqua;" class="wrapper" >
-        <span class="icon-close">
-            <img src="./Public/Picture/Pic_login/close.png" alt="" width="20px">
-        </span>
-        <div class="form-box login">
-            <h2>Đăng nhập</h2>
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon">
-                        <img src="./Public/Picture/Pic_login/email.png" alt="" width="15px">
-                    </span>
-                    <input type="email" required>
-                    <label>Email</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon">
-                    <img src="./Public/Picture/Pic_login/khoa.png" alt="" width="15px">
-                    </span>
-                    <input type="password" required>
-                    <label>Password</label>
-                </div>
-                <div class="remember-forgot">
-                    <label ><input type="checkbox" >Remember me</label>
-                    <a href="#">Quên mật khẩu</a>
-                </div>
-                <button type="submit" class="btn">Đăng nhập</button>
-                <div class="login-register">
-                    <p>Bạn chưa có tài khoản?&nbsp;<a href="#" class="register-link"> Đăng ký</a></p>
-                    
-                </div>
-            
-        </div>
-    </div>
-        </form>
-    </div>
-</div>
-                                    
- 
-  
-        
+                                        <a href="#">Tài khoản<i class="ion-chevron-down"></i></a>
+                                        <ul class="dropdown_links">
+                                            <li><a href="http://localhost/Web%20qu%e1%ba%a3n%20l%c3%bd/Login">Đăng nhập </a></li>
+                                            <li><a href="http://localhost/Web%20qu%e1%ba%a3n%20l%c3%bd/Dangky">Đăng ký</a></li>
+                                        </ul>
                                     </li>
+                                    <p>User Id: <?php echo $_SESSION['Id']; ?></p>
                                 </ul>
                             </div>
                         </div>
@@ -115,14 +64,15 @@
                                     <img src="images/icon/icon_phone.png" alt="">
                                 </div>
                                 <div class="contact_box">
-                                    <p>Liên hệ <a href="tel: 1234567894">1234567894</a></p>
+                                    <p> Hỗ trợ : <a href="tel: 1234567894">1234567894</a></p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-lg-2 col-md-3 col-4">
                             <div class="logo">
-                                <a href="index.php"><img src="images/logo/logo-ash.png" alt=""></a>
+                                <a href="index.html"><img src="images/logo/logo-ash.png" alt=""></a>
+                                
                             </div>
                         </div>
 
@@ -141,10 +91,57 @@
                                     <a href="#"><i class="ion-heart"></i></a>
                                 </div>
                                 <div class="cart_link">
-                                    <a href="#"><i class="ion-android-cart"></i><span class="cart_text_quantity">Rs.
-                                            67,598</span><i class="ion-chevron-down"></i></a>
+                                    <a href="#"><i class="ion-android-cart"></i><span class="cart_text_quantity">
+                                            </span><i class="ion-chevron-down"></i></a>
                                     <span class="cart_quantity">2</span>
 
+                                    <!-- mini cart -->
+                                    <div class="mini_cart">
+                                        <div class="cart_close">
+                                            <div class="cart_text">
+                                                <h3>Giỏ hàng</h3>
+                                            </div>
+                                            <div class="mini_cart_close">
+                                                <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="cart_item">
+                                            <div class="cart_img">
+                                                <a href="#"><img src="images/nav-product/product.jpg" alt=""></a>
+                                            </div>
+                                            <div class="cart_info">
+                                                <a href="#">Nhẫn đôi</a>
+                                                <span class="quantity">SL : 1</span>
+                                                <span class="price_cart"> 20,599,000 VND</span>
+                                            </div>
+                                            <div class="cart_remove">
+                                                <a href="#"><i class="ion-android-close"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="cart_item">
+                                            <div class="cart_img">
+                                                <a href="#"><img src="images/nav-product/product2.jpg" alt=""></a>
+                                            </div>
+                                            <div class="cart_info">
+                                                <a href="#">Bông tai</a>
+                                                <span class="quantity">SL : 1</span>
+                                                <span class="price_cart">12,000,000 VND</span>
+                                            </div>
+                                            <div class="cart_remove">
+                                                <a href="#"><i class="ion-android-close"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="cart_total">
+                                            <span>Tổng tiền : </span>
+                                            <span> 32,599,000 VND</span>
+                                        </div>
+                                        <div class="mini_cart_footer">
+                                            <div class="cart_button checkout">
+                                                <a href="#" class="active">Mua hàng</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- mini cart ends  -->
                                 </div>
                             </div>
                         </div>
@@ -156,91 +153,7 @@
 
             <!-- header bottom starts -->
 
-            <div class="header_bottom sticky-header">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-12">
-                            <div class="main_menu_inner">
-                                <div class="logo_sticky">
-                                    <a href="#"><img src="images/logo/logo-ash.png" alt="logo"></a>
-                                </div>
-                                <div class="main_menu">
-                                    <nav>
-                                        <ul>
-                                            <li class="active">
-                                                <a href="#">Home <i class="ion-chevron-down"></i></a>
-                                                <ul class="sub_menu">
-                                                    <li><a href="#">Banner</a></li>
-                                                    <li><a href="#">Featured</a></li>
-                                                    <li><a href="#">Collection</a></li>
-                                                    <li><a href="#">Best Selling</a></li>
-                                                    <li><a href="#">News</a></li>
-                                                    <li><a href="#">Blog</a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="#">Category <i class="ion-chevron-down"></i></a>
-                                                <ul class="mega_menu">
-                                                    <li>
-                                                        <a href="#">Women</a>
-                                                        <ul>
-                                                            <li><a href="#">Earring</a></li>
-                                                            <li><a href="#">Pendant</a></li>
-                                                            <li><a href="#">Rings</a></li>
-                                                            <li><a href="#">Chain</a></li>
-                                                            <li><a href="#">Bangles</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Men</a>
-                                                        <ul>
-                                                            <li><a href="#">Ring</a></li>
-                                                            <li><a href="#">Pendant</a></li>
-                                                            <li><a href="#">Bracelet</a></li>
-                                                            <li><a href="#">Chain</a></li>
-                                                            <li><a href="#">Gemstone</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Other</a>
-                                                        <ul>
-                                                            <li><a href="#">Platinium</a></li>
-                                                            <li><a href="#">Silver</a></li>
-                                                            <li><a href="#">Coins</a></li>
-                                                            <li><a href="#">Gift Card</a></li>
-                                                        </ul>
-                                                    </li>
-
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="#">Uncut Diamonds <i class="ion-chevron-down"></i></a>
-                                                <ul class="sub_menu pages">
-                                                    <li><a href="#">Earrings</a></li>
-                                                    <li><a href="#">Pendant</a></li>
-                                                    <li><a href="#">Ring</a></li>
-                                                    <li><a href="#">Bracelet</a></li>
-                                                    <li><a href="#">Necklace Set</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">About Us</a></li>
-                                            <li>
-                                                <a href="#">Special Collection <i class="ion-chevron-down"></i></a>
-                                                <ul class="sub_menu pages">
-                                                    <li><a href="#">Gemstone</a></li>
-                                                    <li><a href="#">Gold</a></li>
-                                                    <li><a href="#">Rose Gold</a></li>
-                                                    <li><a href="#">Silver</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
             <!-- header bottom ends -->
         </header>
 
@@ -251,11 +164,11 @@
                     <div class="row align-items-center">
                         <div class="col-12">
                             <div class="slider_content">
-                                <p>exclusive offer -20% off this week</p>
-                                <h1>Necklace</h1>
-                                <span>22 Carat gold necklace for wedding</span>
-                                <p class="slider_price">starting at <span>Rs. 75,999</span></p>
-                                <a href="#" class="button">Shop Now</a>
+                                <p>Khuyến mãi độc quyền-20% tuần này</p>
+                                <h1>Vòng cổ</h1>
+                                <span>Vòng cổ vàng cho đám cưới 22 Carat</span>
+                                <p class="slider_price">Giá khởi điểm <span>75,999,000 VNĐ</span></p>
+                                <a href="#" class="button">Mua ngay</a>
                             </div>
                         </div>
                     </div>
@@ -267,11 +180,11 @@
                     <div class="row align-items-center">
                         <div class="col-12">
                             <div class="slider_content">
-                                <p>exclusive offer -40% off this week</p>
-                                <h1>Earings and Pendant</h1>
-                                <span>Complete bridal set with white pearls</span>
-                                <p class="slider_price">starting at <span>Rs. 89,499</span></p>
-                                <a href="#" class="button">Shop Now</a>
+                                <p>Khuyến mãi độc quyền-40% tuần này</p>
+                                <h1>Bông tai và chuỗi hạt</h1>
+                                <span>Set cô dâu hoàn chỉnh</span>
+                                <p class="slider_price">Giá khởi điểm <span> 89,499,000</span></p>
+                                <a href="#" class="button">Mua ngay</a>
                             </div>
                         </div>
                     </div>
@@ -283,11 +196,11 @@
                     <div class="row align-items-center">
                         <div class="col-12">
                             <div class="slider_content">
-                                <p>exclusive offer -10% off this week</p>
-                                <h1>Wedding Rings</h1>
-                                <span>Ashirwaad Special wedding rings for couples.</span>
-                                <p class="slider_price">starting at <span>Rs. 14,999</span></p>
-                                <a href="#" class="button">Shop Now</a>
+                                <p>Khuyến mãi độc quyền-10% tuần này</p>
+                                <h1>Nhẫn cưới</h1>
+                                <span> Nhẫn cưới giới hạn đặc biệt Luxury dành cho cặp đôi </span>
+                                <p class="slider_price">Giá Khởi điểm <span> 23,999,000</span></p>
+                                <a href="#" class="button">Mua ngay</a>
                             </div>
                         </div>
                     </div>
@@ -305,8 +218,8 @@
                             <div class="banner_thumb">
                                 <a href="#"><img src="images/banner/bg-1.jpg" alt="banner1"></a>
                                 <div class="banner_content">
-                                    <p>New Design</p>
-                                    <h2>Small design Rings</h2>
+                                    <p>Thiết kế mới</p>
+                                    <h2>Nhẫn tạo tác nhỏ</h2>
                                     <span>Sale 20% </span>
                                 </div>
                             </div>
@@ -317,8 +230,8 @@
                             <div class="banner_thumb">
                                 <a href="#"><img src="images/banner/bg-2.jpg" alt="banner2"></a>
                                 <div class="banner_content">
-                                    <p>Bestselling Rings</p>
-                                    <h2>White gold rings</h2>
+                                    <p>Bán chạy nhất</p>
+                                    <h2>Nhẫn kim cương</h2>
                                     <span>Sale 10% </span>
                                 </div>
                             </div>
@@ -329,8 +242,8 @@
                             <div class="banner_thumb">
                                 <a href="#"><img src="images/banner/bg-3.jpg" alt="banner3"></a>
                                 <div class="banner_content">
-                                    <p>Featured Rings</p>
-                                    <h2>Platinium Rings</h2>
+                                    <p>Sản phẩm nổi bật</p>
+                                    <h2>Nhẫn Platinium</h2>
                                     <span>Sale 30% </span>
                                 </div>
                             </div>
@@ -351,15 +264,11 @@
                                 <ul class="nav" role="tablist">
                                     <li>
                                         <a href="#featured" class="active" data-toggle="tab" role="tab"
-                                            aria-controls="featured" aria-selected="true">Featured</a>
-                                    </li>
-                                    <li>
-                                        <a href="#arrivals" data-toggle="tab" role="tab" aria-controls="arrivals"
-                                            aria-selected="false">New Arrivals</a>
+                                            aria-controls="featured" aria-selected="true">Nổi bật</a>
                                     </li>
                                     <li>
                                         <a href="#onsale" data-toggle="tab" role="tab" aria-controls="onsale"
-                                            aria-selected="false">On-Sale</a>
+                                            aria-selected="false">Giảm giá</a>
                                     </li>
 
                                 </ul>
@@ -373,23 +282,22 @@
                                                     <div class="product_thumb">
                                                         <a href="#" class="primary_img"><img src="images/product/1.jpg"
                                                                 alt="product1"></a>
-                                                        <a href="#" class="secondary_img"><img
-                                                                src="images/product/2.jpg" alt="product1"></a>
+                                                        <!-- <a href="#" class="secondary_img"><img
+                                                                src="images/product/2.jpg" alt="product1"></a> -->
                                                         <div class="quick_button">
                                                             <a href="#" data-toggle="modal" data-target="#modal_box"
                                                                 data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
+                                                                data-original-title="quick view">Chi tiết</a>
                                                         </div>
                                                     </div>
                                                     <div class="product_content">
                                                         <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
+                                                            <a href="#">Trang sức</a>
                                                         </div>
-                                                        <h3><a href="#">Necklace</a></h3>
+                                                        <h3><a href="#">Vòng cổ</a></h3>
                                                         <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
+                                                            <span class="old_price">45,000,000 VND</span>
+                                                            <span class="current_price">44,150,000 VND</span>
                                                         </div>
                                                         <div class="product_hover">
                                                             <div class="product_ratings">
@@ -415,7 +323,19 @@
                                                                 <p>This is a gold ring with diamond and Lorem ipsum
                                                                     dolor sit amet.</p>
                                                             </div>
-                                                            
+                                                            <div class="action_links">
+                                                                <ul>
+                                                                    <li><a href="#" data-placement="top"
+                                                                            title="Add to Wishlist"
+                                                                            data-toggle="tooltip"><span
+                                                                                class="ion-heart"></span></a></li>
+                                                                    <li class="add_to_cart"><a href="#"
+                                                                            title="Add to Cart">Mua hàng</a></li>
+                                                                    <li><a href="#" title="Compare"><i
+                                                                                class="ion-ios-settings-strong"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -431,18 +351,17 @@
                                                         <div class="quick_button">
                                                             <a href="#" data-toggle="modal" data-target="#modal_box"
                                                                 data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
+                                                                data-original-title="quick view">Chi tiết</a>
                                                         </div>
                                                     </div>
                                                     <div class="product_content">
                                                         <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
+                                                            <a href="#">Trang sức</a>
                                                         </div>
-                                                        <h3><a href="#">Earrings</a></h3>
+                                                        <h3><a href="#">Bông tai</a></h3>
                                                         <div class="price_box">
 
-                                                            <span class="current_price">Rs. 45015</span>
+                                                            <span class="current_price">45,000,000 VND</span>
                                                         </div>
                                                         <div class="product_hover">
                                                             <div class="product_ratings">
@@ -468,7 +387,19 @@
                                                                 <p>This is a gold ring with diamond and Lorem ipsum
                                                                     dolor sit amet.</p>
                                                             </div>
-                                                            <!--  -->
+                                                            <div class="action_links">
+                                                                <ul>
+                                                                    <li><a href="#" data-placement="top"
+                                                                            title="Add to Wishlist"
+                                                                            data-toggle="tooltip"><span
+                                                                                class="ion-heart"></span></a></li>
+                                                                    <li class="add_to_cart"><a href="#"
+                                                                            title="Add to Cart">Mua hàng</a></li>
+                                                                    <li><a href="#" title="Compare"><i
+                                                                                class="ion-ios-settings-strong"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -483,15 +414,14 @@
                                                         <div class="quick_button">
                                                             <a href="#" data-toggle="modal" data-target="#modal_box"
                                                                 data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
+                                                                data-original-title="quick view">Chi tiết</a>
                                                         </div>
                                                     </div>
                                                     <div class="product_content">
                                                         <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
+                                                            <a href="#">Trang sức</a>
                                                         </div>
-                                                        <h3><a href="#">Bracelet</a></h3>
+                                                        <h3><a href="#">Vòng cổ</a></h3>
                                                         <div class="price_box">
                                                             <span class="old_price">Rs. 75654</span>
                                                             <span class="current_price">Rs. 74015</span>
@@ -520,7 +450,19 @@
                                                                 <p>This is a gold ring with diamond and Lorem ipsum
                                                                     dolor sit amet.</p>
                                                             </div>
-                                                            <!--  -->
+                                                            <div class="action_links">
+                                                                <ul>
+                                                                    <li><a href="#" data-placement="top"
+                                                                            title="Add to Wishlist"
+                                                                            data-toggle="tooltip"><span
+                                                                                class="ion-heart"></span></a></li>
+                                                                    <li class="add_to_cart"><a href="#"
+                                                                            title="Add to Cart">Mua hàng</a></li>
+                                                                    <li><a href="#" title="Compare"><i
+                                                                                class="ion-ios-settings-strong"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -535,18 +477,17 @@
                                                         <div class="quick_button">
                                                             <a href="#" data-toggle="modal" data-target="#modal_box"
                                                                 data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
+                                                                data-original-title="quick view">Chi tiết</a>
                                                         </div>
                                                     </div>
                                                     <div class="product_content">
                                                         <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
+                                                            <a href="#">Trang sức</a>
                                                         </div>
-                                                        <h3><a href="#">Bangles</a></h3>
+                                                        <h3><a href="#">Bông tai</a></h3>
                                                         <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
+                                                            <span class="old_price">45,000,000 </span>
+                                                            <span class="current_price">44,150,000 VND</span>
                                                         </div>
                                                         <div class="product_hover">
                                                             <div class="product_ratings">
@@ -572,7 +513,19 @@
                                                                 <p>This is a gold ring with diamond and Lorem ipsum
                                                                     dolor sit amet.</p>
                                                             </div>
-                                                            <!--  -->
+                                                            <div class="action_links">
+                                                                <ul>
+                                                                    <li><a href="#" data-placement="top"
+                                                                            title="Add to Wishlist"
+                                                                            data-toggle="tooltip"><span
+                                                                                class="ion-heart"></span></a></li>
+                                                                    <li class="add_to_cart"><a href="#"
+                                                                            title="Add to Cart">Mua hàng</a></li>
+                                                                    <li><a href="#" title="Compare"><i
+                                                                                class="ion-ios-settings-strong"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -587,18 +540,17 @@
                                                         <div class="quick_button">
                                                             <a href="#" data-toggle="modal" data-target="#modal_box"
                                                                 data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
+                                                                data-original-title="quick view">Chi tiết</a>
                                                         </div>
                                                     </div>
                                                     <div class="product_content">
                                                         <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
+                                                            <a href="#">Trang sức</a>
                                                         </div>
-                                                        <h3><a href="#">Gemstones</a></h3>
+                                                        <h3><a href="#">Đá quý</a></h3>
                                                         <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
+                                                            <span class="old_price">45,000,000 </span>
+                                                            <span class="current_price">44,150,000 VND</span>
                                                         </div>
                                                         <div class="product_hover">
                                                             <div class="product_ratings">
@@ -624,7 +576,19 @@
                                                                 <p>This is a gold ring with diamond and Lorem ipsum
                                                                     dolor sit amet.</p>
                                                             </div>
-                                                            
+                                                            <div class="action_links">
+                                                                <ul>
+                                                                    <li><a href="#" data-placement="top"
+                                                                            title="Add to Wishlist"
+                                                                            data-toggle="tooltip"><span
+                                                                                class="ion-heart"></span></a></li>
+                                                                    <li class="add_to_cart"><a href="#"
+                                                                            title="Add to Cart">Mua hàng</a></li>
+                                                                    <li><a href="#" title="Compare"><i
+                                                                                class="ion-ios-settings-strong"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -639,18 +603,17 @@
                                                         <div class="quick_button">
                                                             <a href="#" data-toggle="modal" data-target="#modal_box"
                                                                 data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
+                                                                data-original-title="quick view">Chi tiết</a>
                                                         </div>
                                                     </div>
                                                     <div class="product_content">
                                                         <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
+                                                            <a href="#">Trang sức</a>
                                                         </div>
-                                                        <h3><a href="#">Wedding set</a></h3>
+                                                        <h3><a href="#">Vòng cổ</a></h3>
                                                         <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
+                                                            <span class="old_price">45,000,000 </span>
+                                                            <span class="current_price">44,150,000 VND</span>
                                                         </div>
                                                         <div class="product_hover">
                                                             <div class="product_ratings">
@@ -676,7 +639,19 @@
                                                                 <p>This is a gold ring with diamond and Lorem ipsum
                                                                     dolor sit amet.</p>
                                                             </div>
-                                                            
+                                                            <div class="action_links">
+                                                                <ul>
+                                                                    <li><a href="#" data-placement="top"
+                                                                            title="Add to Wishlist"
+                                                                            data-toggle="tooltip"><span
+                                                                                class="ion-heart"></span></a></li>
+                                                                    <li class="add_to_cart"><a href="#"
+                                                                            title="Add to Cart">Mua hàng</a></li>
+                                                                    <li><a href="#" title="Compare"><i
+                                                                                class="ion-ios-settings-strong"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -691,18 +666,17 @@
                                                         <div class="quick_button">
                                                             <a href="#" data-toggle="modal" data-target="#modal_box"
                                                                 data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
+                                                                data-original-title="quick view">Chi tiết</a>
                                                         </div>
                                                     </div>
                                                     <div class="product_content">
                                                         <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
+                                                            <a href="#">Trang sức</a>
                                                         </div>
                                                         <h3><a href="#">Nose Pin</a></h3>
                                                         <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
+                                                            <span class="old_price">45,000,000 </span>
+                                                            <span class="current_price">44,150,000 VND</span>
                                                         </div>
                                                         <div class="product_hover">
                                                             <div class="product_ratings">
@@ -728,7 +702,19 @@
                                                                 <p>This is a gold ring with diamond and Lorem ipsum
                                                                     dolor sit amet.</p>
                                                             </div>
-                                                            
+                                                            <div class="action_links">
+                                                                <ul>
+                                                                    <li><a href="#" data-placement="top"
+                                                                            title="Add to Wishlist"
+                                                                            data-toggle="tooltip"><span
+                                                                                class="ion-heart"></span></a></li>
+                                                                    <li class="add_to_cart"><a href="#"
+                                                                            title="Add to Cart">Mua hàng</a></li>
+                                                                    <li><a href="#" title="Compare"><i
+                                                                                class="ion-ios-settings-strong"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -743,18 +729,17 @@
                                                         <div class="quick_button">
                                                             <a href="#" data-toggle="modal" data-target="#modal_box"
                                                                 data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
+                                                                data-original-title="quick view">Chi tiết</a>
                                                         </div>
                                                     </div>
                                                     <div class="product_content">
                                                         <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
+                                                            <a href="#">Trang sức</a>
                                                         </div>
                                                         <h3><a href="#">Diamonds</a></h3>
                                                         <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
+                                                            <span class="old_price">45,000,000 </span>
+                                                            <span class="current_price">44,150,000 VND</span>
                                                         </div>
                                                         <div class="product_hover">
                                                             <div class="product_ratings">
@@ -780,7 +765,19 @@
                                                                 <p>This is a gold ring with diamond and Lorem ipsum
                                                                     dolor sit amet.</p>
                                                             </div>
-                                                            
+                                                            <div class="action_links">
+                                                                <ul>
+                                                                    <li><a href="#" data-placement="top"
+                                                                            title="Add to Wishlist"
+                                                                            data-toggle="tooltip"><span
+                                                                                class="ion-heart"></span></a></li>
+                                                                    <li class="add_to_cart"><a href="#"
+                                                                            title="Add to Cart">Mua hàng</a></li>
+                                                                    <li><a href="#" title="Compare"><i
+                                                                                class="ion-ios-settings-strong"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -795,18 +792,17 @@
                                                         <div class="quick_button">
                                                             <a href="#" data-toggle="modal" data-target="#modal_box"
                                                                 data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
+                                                                data-original-title="quick view">Chi tiết</a>
                                                         </div>
                                                     </div>
                                                     <div class="product_content">
                                                         <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
+                                                            <a href="#">Trang sức</a>
                                                         </div>
                                                         <h3><a href="#">Ring</a></h3>
                                                         <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
+                                                            <span class="old_price">45,000,000 </span>
+                                                            <span class="current_price">44,150,000 VND</span>
                                                         </div>
                                                         <div class="product_hover">
                                                             <div class="product_ratings">
@@ -832,7 +828,19 @@
                                                                 <p>This is a gold ring with diamond and Lorem ipsum
                                                                     dolor sit amet.</p>
                                                             </div>
-                                                            
+                                                            <div class="action_links">
+                                                                <ul>
+                                                                    <li><a href="#" data-placement="top"
+                                                                            title="Add to Wishlist"
+                                                                            data-toggle="tooltip"><span
+                                                                                class="ion-heart"></span></a></li>
+                                                                    <li class="add_to_cart"><a href="#"
+                                                                            title="Add to Cart">Mua hàng</a></li>
+                                                                    <li><a href="#" title="Compare"><i
+                                                                                class="ion-ios-settings-strong"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -847,18 +855,17 @@
                                                         <div class="quick_button">
                                                             <a href="#" data-toggle="modal" data-target="#modal_box"
                                                                 data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
+                                                                data-original-title="quick view">Chi tiết</a>
                                                         </div>
                                                     </div>
                                                     <div class="product_content">
                                                         <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
+                                                            <a href="#">Trang sức</a>
                                                         </div>
                                                         <h3><a href="#">Couple Ring</a></h3>
                                                         <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
+                                                            <span class="old_price">45,000,000 VND </span>
+                                                            <span class="current_price">44,150,000 VND</span>
                                                         </div>
                                                         <div class="product_hover">
                                                             <div class="product_ratings">
@@ -884,7 +891,19 @@
                                                                 <p>This is a gold ring with diamond and Lorem ipsum
                                                                     dolor sit amet.</p>
                                                             </div>
-                                                            
+                                                            <div class="action_links">
+                                                                <ul>
+                                                                    <li><a href="#" data-placement="top"
+                                                                            title="Add to Wishlist"
+                                                                            data-toggle="tooltip"><span
+                                                                                class="ion-heart"></span></a></li>
+                                                                    <li class="add_to_cart"><a href="#"
+                                                                            title="Add to Cart">Mua hàng</a></li>
+                                                                    <li><a href="#" title="Compare"><i
+                                                                                class="ion-ios-settings-strong"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -899,18 +918,17 @@
                                                         <div class="quick_button">
                                                             <a href="#" data-toggle="modal" data-target="#modal_box"
                                                                 data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
+                                                                data-original-title="quick view">Chi tiết</a>
                                                         </div>
                                                     </div>
                                                     <div class="product_content">
                                                         <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
+                                                            <a href="#">Trang sức</a>
                                                         </div>
-                                                        <h3><a href="#">Bracelet</a></h3>
+                                                        <h3><a href="#">Vòng cổ</a></h3>
                                                         <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
+                                                            <span class="old_price">45,000,000 VND</span>
+                                                            <span class="current_price">44,150,000 VND</span>
                                                         </div>
                                                         <div class="product_hover">
                                                             <div class="product_ratings">
@@ -936,7 +954,19 @@
                                                                 <p>This is a gold ring with diamond and Lorem ipsum
                                                                     dolor sit amet.</p>
                                                             </div>
-                                                            
+                                                            <div class="action_links">
+                                                                <ul>
+                                                                    <li><a href="#" data-placement="top"
+                                                                            title="Add to Wishlist"
+                                                                            data-toggle="tooltip"><span
+                                                                                class="ion-heart"></span></a></li>
+                                                                    <li class="add_to_cart"><a href="#"
+                                                                            title="Add to Cart">Mua hàng</a></li>
+                                                                    <li><a href="#" title="Compare"><i
+                                                                                class="ion-ios-settings-strong"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -951,18 +981,17 @@
                                                         <div class="quick_button">
                                                             <a href="#" data-toggle="modal" data-target="#modal_box"
                                                                 data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
+                                                                data-original-title="quick view">Chi tiết</a>
                                                         </div>
                                                     </div>
                                                     <div class="product_content">
                                                         <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
+                                                            <a href="#">Trang sức</a>
                                                         </div>
-                                                        <h3><a href="#">Necklace Set</a></h3>
+                                                        <h3><a href="#">Vòng cổ Set</a></h3>
                                                         <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
+                                                            <span class="old_price">45,000,000 VND</span>
+                                                            <span class="current_price">44,150,000 VND</span>
                                                         </div>
                                                         <div class="product_hover">
                                                             <div class="product_ratings">
@@ -988,7 +1017,19 @@
                                                                 <p>This is a gold ring with diamond and Lorem ipsum
                                                                     dolor sit amet.</p>
                                                             </div>
-                                                            
+                                                            <div class="action_links">
+                                                                <ul>
+                                                                    <li><a href="#" data-placement="top"
+                                                                            title="Add to Wishlist"
+                                                                            data-toggle="tooltip"><span
+                                                                                class="ion-heart"></span></a></li>
+                                                                    <li class="add_to_cart"><a href="#"
+                                                                            title="Add to Cart">Mua hàng</a></li>
+                                                                    <li><a href="#" title="Compare"><i
+                                                                                class="ion-ios-settings-strong"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -996,637 +1037,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="arrivals" role="tabpane1">
-                                    <div class="product_container">
-                                        <div class="custom-row product_column3">
-                                            <div class="custom-col-5">
-                                                <div class="single_product">
-                                                    <div class="product_thumb">
-                                                        <a href="#" class="primary_img"><img src="images/product/25.jpg"
-                                                                alt="product1"></a>
-                                                        <a href="#" class="secondary_img"><img
-                                                                src="images/product/26.jpg" alt="product1"></a>
-                                                        <div class="quick_button">
-                                                            <a href="#" data-toggle="modal" data-target="#modal_box"
-                                                                data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product_content">
-                                                        <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
-                                                        </div>
-                                                        <h3><a href="#">Necklace</a></h3>
-                                                        <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
-                                                        </div>
-                                                        <div class="product_hover">
-                                                            <div class="product_ratings">
-                                                                <ul>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="product_desc">
-                                                                <p>This is a gold ring with diamond and Lorem ipsum
-                                                                    dolor sit amet.</p>
-                                                            </div>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="custom-col-5">
-                                                <div class="single_product">
-                                                    <div class="product_thumb">
-                                                        <a href="#" class="primary_img"><img src="images/product/27.jpg"
-                                                                alt="product1"></a>
-                                                        <a href="#" class="secondary_img"><img
-                                                                src="images/product/28.jpg" alt="product1"></a>
-                                                        <div class="quick_button">
-                                                            <a href="#" data-toggle="modal" data-target="#modal_box"
-                                                                data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product_content">
-                                                        <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
-                                                        </div>
-                                                        <h3><a href="#">Earrings</a></h3>
-                                                        <div class="price_box">
-
-                                                            <span class="current_price">Rs. 45015</span>
-                                                        </div>
-                                                        <div class="product_hover">
-                                                            <div class="product_ratings">
-                                                                <ul>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="product_desc">
-                                                                <p>This is a gold ring with diamond and Lorem ipsum
-                                                                    dolor sit amet.</p>
-                                                            </div>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="custom-col-5">
-                                                <div class="single_product">
-                                                    <div class="product_thumb">
-                                                        <a href="#" class="primary_img"><img src="images/product/29.jpg"
-                                                                alt="product1"></a>
-                                                        <a href="#" class="secondary_img"><img
-                                                                src="images/product/30.jpg" alt="product1"></a>
-                                                        <div class="quick_button">
-                                                            <a href="#" data-toggle="modal" data-target="#modal_box"
-                                                                data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product_content">
-                                                        <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
-                                                        </div>
-                                                        <h3><a href="#">Bracelet</a></h3>
-                                                        <div class="price_box">
-                                                            <span class="old_price">Rs. 75654</span>
-                                                            <span class="current_price">Rs. 74015</span>
-                                                        </div>
-                                                        <div class="product_hover">
-                                                            <div class="product_ratings">
-                                                                <ul>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="product_desc">
-                                                                <p>This is a gold ring with diamond and Lorem ipsum
-                                                                    dolor sit amet.</p>
-                                                            </div>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="custom-col-5">
-                                                <div class="single_product">
-                                                    <div class="product_thumb">
-                                                        <a href="#" class="primary_img"><img src="images/product/31.jpg"
-                                                                alt="product1"></a>
-                                                        <a href="#" class="secondary_img"><img
-                                                                src="images/product/32.jpg" alt="product1"></a>
-                                                        <div class="quick_button">
-                                                            <a href="#" data-toggle="modal" data-target="#modal_box"
-                                                                data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product_content">
-                                                        <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
-                                                        </div>
-                                                        <h3><a href="#">Bangles</a></h3>
-                                                        <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
-                                                        </div>
-                                                        <div class="product_hover">
-                                                            <div class="product_ratings">
-                                                                <ul>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="product_desc">
-                                                                <p>This is a gold ring with diamond and Lorem ipsum
-                                                                    dolor sit amet.</p>
-                                                            </div>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="custom-col-5">
-                                                <div class="single_product">
-                                                    <div class="product_thumb">
-                                                        <a href="#" class="primary_img"><img src="images/product/33.jpg"
-                                                                alt="product1"></a>
-                                                        <a href="#" class="secondary_img"><img
-                                                                src="images/product/34.jpg" alt="product1"></a>
-                                                        <div class="quick_button">
-                                                            <a href="#" data-toggle="modal" data-target="#modal_box"
-                                                                data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product_content">
-                                                        <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
-                                                        </div>
-                                                        <h3><a href="#">Gemstones</a></h3>
-                                                        <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
-                                                        </div>
-                                                        <div class="product_hover">
-                                                            <div class="product_ratings">
-                                                                <ul>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="product_desc">
-                                                                <p>This is a gold ring with diamond and Lorem ipsum
-                                                                    dolor sit amet.</p>
-                                                            </div>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="custom-col-5">
-                                                <div class="single_product">
-                                                    <div class="product_thumb">
-                                                        <a href="#" class="primary_img"><img src="images/product/35.jpg"
-                                                                alt="product1"></a>
-                                                        <a href="#" class="secondary_img"><img
-                                                                src="images/product/36.jpg" alt="product1"></a>
-                                                        <div class="quick_button">
-                                                            <a href="#" data-toggle="modal" data-target="#modal_box"
-                                                                data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product_content">
-                                                        <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
-                                                        </div>
-                                                        <h3><a href="#">Wedding set</a></h3>
-                                                        <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
-                                                        </div>
-                                                        <div class="product_hover">
-                                                            <div class="product_ratings">
-                                                                <ul>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="product_desc">
-                                                                <p>This is a gold ring with diamond and Lorem ipsum
-                                                                    dolor sit amet.</p>
-                                                            </div>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="custom-col-5">
-                                                <div class="single_product">
-                                                    <div class="product_thumb">
-                                                        <a href="#" class="primary_img"><img src="images/product/37.jpg"
-                                                                alt="product1"></a>
-                                                        <a href="#" class="secondary_img"><img
-                                                                src="images/product/38.jpg" alt="product1"></a>
-                                                        <div class="quick_button">
-                                                            <a href="#" data-toggle="modal" data-target="#modal_box"
-                                                                data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product_content">
-                                                        <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
-                                                        </div>
-                                                        <h3><a href="#">Nose Pin</a></h3>
-                                                        <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
-                                                        </div>
-                                                        <div class="product_hover">
-                                                            <div class="product_ratings">
-                                                                <ul>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="product_desc">
-                                                                <p>This is a gold ring with diamond and Lorem ipsum
-                                                                    dolor sit amet.</p>
-                                                            </div>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="custom-col-5">
-                                                <div class="single_product">
-                                                    <div class="product_thumb">
-                                                        <a href="#" class="primary_img"><img src="images/product/39.jpg"
-                                                                alt="product1"></a>
-                                                        <a href="#" class="secondary_img"><img
-                                                                src="images/product/40.jpg" alt="product1"></a>
-                                                        <div class="quick_button">
-                                                            <a href="#" data-toggle="modal" data-target="#modal_box"
-                                                                data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product_content">
-                                                        <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
-                                                        </div>
-                                                        <h3><a href="#">Diamonds</a></h3>
-                                                        <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
-                                                        </div>
-                                                        <div class="product_hover">
-                                                            <div class="product_ratings">
-                                                                <ul>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="product_desc">
-                                                                <p>This is a gold ring with diamond and Lorem ipsum
-                                                                    dolor sit amet.</p>
-                                                            </div>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="custom-col-5">
-                                                <div class="single_product">
-                                                    <div class="product_thumb">
-                                                        <a href="#" class="primary_img"><img src="images/product/41.jpg"
-                                                                alt="product1"></a>
-                                                        <a href="#" class="secondary_img"><img
-                                                                src="images/product/42.jpg" alt="product1"></a>
-                                                        <div class="quick_button">
-                                                            <a href="#" data-toggle="modal" data-target="#modal_box"
-                                                                data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product_content">
-                                                        <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
-                                                        </div>
-                                                        <h3><a href="#">Ring</a></h3>
-                                                        <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
-                                                        </div>
-                                                        <div class="product_hover">
-                                                            <div class="product_ratings">
-                                                                <ul>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="product_desc">
-                                                                <p>This is a gold ring with diamond and Lorem ipsum
-                                                                    dolor sit amet.</p>
-                                                            </div>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="custom-col-5">
-                                                <div class="single_product">
-                                                    <div class="product_thumb">
-                                                        <a href="#" class="primary_img"><img src="images/product/43.jpg"
-                                                                alt="product1"></a>
-                                                        <a href="#" class="secondary_img"><img
-                                                                src="images/product/44.jpg" alt="product1"></a>
-                                                        <div class="quick_button">
-                                                            <a href="#" data-toggle="modal" data-target="#modal_box"
-                                                                data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product_content">
-                                                        <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
-                                                        </div>
-                                                        <h3><a href="#">Couple Ring</a></h3>
-                                                        <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
-                                                        </div>
-                                                        <div class="product_hover">
-                                                            <div class="product_ratings">
-                                                                <ul>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="product_desc">
-                                                                <p>This is a gold ring with diamond and Lorem ipsum
-                                                                    dolor sit amet.</p>
-                                                            </div>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="custom-col-5">
-                                                <div class="single_product">
-                                                    <div class="product_thumb">
-                                                        <a href="#" class="primary_img"><img src="images/product/45.jpg"
-                                                                alt="product1"></a>
-                                                        <a href="#" class="secondary_img"><img
-                                                                src="images/product/46.jpg" alt="product1"></a>
-                                                        <div class="quick_button">
-                                                            <a href="#" data-toggle="modal" data-target="#modal_box"
-                                                                data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product_content">
-                                                        <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
-                                                        </div>
-                                                        <h3><a href="#">Bracelet</a></h3>
-                                                        <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
-                                                        </div>
-                                                        <div class="product_hover">
-                                                            <div class="product_ratings">
-                                                                <ul>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="product_desc">
-                                                                <p>This is a gold ring with diamond and Lorem ipsum
-                                                                    dolor sit amet.</p>
-                                                            </div>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="custom-col-5">
-                                                <div class="single_product">
-                                                    <div class="product_thumb">
-                                                        <a href="#" class="primary_img"><img src="images/product/47.jpg"
-                                                                alt="product1"></a>
-                                                        <a href="#" class="secondary_img"><img
-                                                                src="images/product/48.jpg" alt="product1"></a>
-                                                        <div class="quick_button">
-                                                            <a href="#" data-toggle="modal" data-target="#modal_box"
-                                                                data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product_content">
-                                                        <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
-                                                        </div>
-                                                        <h3><a href="#">Necklace Set</a></h3>
-                                                        <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
-                                                        </div>
-                                                        <div class="product_hover">
-                                                            <div class="product_ratings">
-                                                                <ul>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="ion-ios-star-outline"></i></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="product_desc">
-                                                                <p>This is a gold ring with diamond and Lorem ipsum
-                                                                    dolor sit amet.</p>
-                                                            </div>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <div class="tab-pane fade" id="onsale" role="tabpane1">
                                     <div class="product_container">
                                         <div class="custom-row product_column3">
@@ -1640,18 +1051,17 @@
                                                         <div class="quick_button">
                                                             <a href="#" data-toggle="modal" data-target="#modal_box"
                                                                 data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
+                                                                data-original-title="quick view">Chi tiết</a>
                                                         </div>
                                                     </div>
                                                     <div class="product_content">
                                                         <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
+                                                            <a href="#">Trang sức</a>
                                                         </div>
-                                                        <h3><a href="#">Necklace</a></h3>
+                                                        <h3><a href="#">Vòng cổ</a></h3>
                                                         <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
+                                                            <span class="old_price">45,000,000 VND</span>
+                                                            <span class="current_price">44,150,000 VND</span>
                                                         </div>
                                                         <div class="product_hover">
                                                             <div class="product_ratings">
@@ -1677,7 +1087,19 @@
                                                                 <p>This is a gold ring with diamond and Lorem ipsum
                                                                     dolor sit amet.</p>
                                                             </div>
-                                                            
+                                                            <div class="action_links">
+                                                                <ul>
+                                                                    <li><a href="#" data-placement="top"
+                                                                            title="Add to Wishlist"
+                                                                            data-toggle="tooltip"><span
+                                                                                class="ion-heart"></span></a></li>
+                                                                    <li class="add_to_cart"><a href="#"
+                                                                            title="Add to Cart">Mua hàng</a></li>
+                                                                    <li><a href="#" title="Compare"><i
+                                                                                class="ion-ios-settings-strong"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1693,18 +1115,17 @@
                                                         <div class="quick_button">
                                                             <a href="#" data-toggle="modal" data-target="#modal_box"
                                                                 data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
+                                                                data-original-title="quick view">Chi tiết</a>
                                                         </div>
                                                     </div>
                                                     <div class="product_content">
                                                         <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
+                                                            <a href="#">Trang sức</a>
                                                         </div>
-                                                        <h3><a href="#">Earrings</a></h3>
+                                                        <h3><a href="#">Bông tai</a></h3>
                                                         <div class="price_box">
 
-                                                            <span class="current_price">Rs. 45015</span>
+                                                            <span class="current_price">45,000,000 VND</span>
                                                         </div>
                                                         <div class="product_hover">
                                                             <div class="product_ratings">
@@ -1730,7 +1151,19 @@
                                                                 <p>This is a gold ring with diamond and Lorem ipsum
                                                                     dolor sit amet.</p>
                                                             </div>
-                                                            
+                                                            <div class="action_links">
+                                                                <ul>
+                                                                    <li><a href="#" data-placement="top"
+                                                                            title="Add to Wishlist"
+                                                                            data-toggle="tooltip"><span
+                                                                                class="ion-heart"></span></a></li>
+                                                                    <li class="add_to_cart"><a href="#"
+                                                                            title="Add to Cart">Mua hàng</a></li>
+                                                                    <li><a href="#" title="Compare"><i
+                                                                                class="ion-ios-settings-strong"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1745,15 +1178,14 @@
                                                         <div class="quick_button">
                                                             <a href="#" data-toggle="modal" data-target="#modal_box"
                                                                 data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
+                                                                data-original-title="quick view">Chi tiết</a>
                                                         </div>
                                                     </div>
                                                     <div class="product_content">
                                                         <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
+                                                            <a href="#">Trang sức</a>
                                                         </div>
-                                                        <h3><a href="#">Bracelet</a></h3>
+                                                        <h3><a href="#">Vòng cổ</a></h3>
                                                         <div class="price_box">
                                                             <span class="old_price">Rs. 75654</span>
                                                             <span class="current_price">Rs. 74015</span>
@@ -1782,7 +1214,19 @@
                                                                 <p>This is a gold ring with diamond and Lorem ipsum
                                                                     dolor sit amet.</p>
                                                             </div>
-                                                            
+                                                            <div class="action_links">
+                                                                <ul>
+                                                                    <li><a href="#" data-placement="top"
+                                                                            title="Add to Wishlist"
+                                                                            data-toggle="tooltip"><span
+                                                                                class="ion-heart"></span></a></li>
+                                                                    <li class="add_to_cart"><a href="#"
+                                                                            title="Add to Cart">Mua hàng</a></li>
+                                                                    <li><a href="#" title="Compare"><i
+                                                                                class="ion-ios-settings-strong"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1797,18 +1241,17 @@
                                                         <div class="quick_button">
                                                             <a href="#" data-toggle="modal" data-target="#modal_box"
                                                                 data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
+                                                                data-original-title="quick view">Chi tiết</a>
                                                         </div>
                                                     </div>
                                                     <div class="product_content">
                                                         <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
+                                                            <a href="#">Trang sức</a>
                                                         </div>
                                                         <h3><a href="#">Bangles</a></h3>
                                                         <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
+                                                            <span class="old_price">45,000,000 VND</span>
+                                                            <span class="current_price">44,150,000 VND</span>
                                                         </div>
                                                         <div class="product_hover">
                                                             <div class="product_ratings">
@@ -1834,7 +1277,19 @@
                                                                 <p>This is a gold ring with diamond and Lorem ipsum
                                                                     dolor sit amet.</p>
                                                             </div>
-                                                            
+                                                            <div class="action_links">
+                                                                <ul>
+                                                                    <li><a href="#" data-placement="top"
+                                                                            title="Add to Wishlist"
+                                                                            data-toggle="tooltip"><span
+                                                                                class="ion-heart"></span></a></li>
+                                                                    <li class="add_to_cart"><a href="#"
+                                                                            title="Add to Cart">Mua hàng</a></li>
+                                                                    <li><a href="#" title="Compare"><i
+                                                                                class="ion-ios-settings-strong"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1849,18 +1304,17 @@
                                                         <div class="quick_button">
                                                             <a href="#" data-toggle="modal" data-target="#modal_box"
                                                                 data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
+                                                                data-original-title="quick view">Chi tiết</a>
                                                         </div>
                                                     </div>
                                                     <div class="product_content">
                                                         <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
+                                                            <a href="#">Trang sức</a>
                                                         </div>
                                                         <h3><a href="#">Gemstones</a></h3>
                                                         <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
+                                                            <span class="old_price">45,000,000 VND</span>
+                                                            <span class="current_price">44,150,000 VND</span>
                                                         </div>
                                                         <div class="product_hover">
                                                             <div class="product_ratings">
@@ -1886,7 +1340,19 @@
                                                                 <p>This is a gold ring with diamond and Lorem ipsum
                                                                     dolor sit amet.</p>
                                                             </div>
-                                                            
+                                                            <div class="action_links">
+                                                                <ul>
+                                                                    <li><a href="#" data-placement="top"
+                                                                            title="Add to Wishlist"
+                                                                            data-toggle="tooltip"><span
+                                                                                class="ion-heart"></span></a></li>
+                                                                    <li class="add_to_cart"><a href="#"
+                                                                            title="Add to Cart">Mua hàng</a></li>
+                                                                    <li><a href="#" title="Compare"><i
+                                                                                class="ion-ios-settings-strong"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1901,18 +1367,17 @@
                                                         <div class="quick_button">
                                                             <a href="#" data-toggle="modal" data-target="#modal_box"
                                                                 data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
+                                                                data-original-title="quick view">Chi tiết</a>
                                                         </div>
                                                     </div>
                                                     <div class="product_content">
                                                         <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
+                                                            <a href="#">Trang sức</a>
                                                         </div>
                                                         <h3><a href="#">Wedding set</a></h3>
                                                         <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
+                                                            <span class="old_price">45,000,000 VND</span>
+                                                            <span class="current_price">44,150,000 VND</span>
                                                         </div>
                                                         <div class="product_hover">
                                                             <div class="product_ratings">
@@ -1938,7 +1403,19 @@
                                                                 <p>This is a gold ring with diamond and Lorem ipsum
                                                                     dolor sit amet.</p>
                                                             </div>
-                                                            
+                                                            <div class="action_links">
+                                                                <ul>
+                                                                    <li><a href="#" data-placement="top"
+                                                                            title="Add to Wishlist"
+                                                                            data-toggle="tooltip"><span
+                                                                                class="ion-heart"></span></a></li>
+                                                                    <li class="add_to_cart"><a href="#"
+                                                                            title="Add to Cart">Mua hàng</a></li>
+                                                                    <li><a href="#" title="Compare"><i
+                                                                                class="ion-ios-settings-strong"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1953,18 +1430,17 @@
                                                         <div class="quick_button">
                                                             <a href="#" data-toggle="modal" data-target="#modal_box"
                                                                 data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
+                                                                data-original-title="quick view">Chi tiết</a>
                                                         </div>
                                                     </div>
                                                     <div class="product_content">
                                                         <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
+                                                            <a href="#">Trang sức</a>
                                                         </div>
                                                         <h3><a href="#">Nose Pin</a></h3>
                                                         <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
+                                                            <span class="old_price">45,000,000 VND</span>
+                                                            <span class="current_price">44,150,000 VND</span>
                                                         </div>
                                                         <div class="product_hover">
                                                             <div class="product_ratings">
@@ -1990,7 +1466,19 @@
                                                                 <p>This is a gold ring with diamond and Lorem ipsum
                                                                     dolor sit amet.</p>
                                                             </div>
-                                                            
+                                                            <div class="action_links">
+                                                                <ul>
+                                                                    <li><a href="#" data-placement="top"
+                                                                            title="Add to Wishlist"
+                                                                            data-toggle="tooltip"><span
+                                                                                class="ion-heart"></span></a></li>
+                                                                    <li class="add_to_cart"><a href="#"
+                                                                            title="Add to Cart">Mua hàng</a></li>
+                                                                    <li><a href="#" title="Compare"><i
+                                                                                class="ion-ios-settings-strong"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2005,18 +1493,17 @@
                                                         <div class="quick_button">
                                                             <a href="#" data-toggle="modal" data-target="#modal_box"
                                                                 data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
+                                                                data-original-title="quick view">Chi tiết</a>
                                                         </div>
                                                     </div>
                                                     <div class="product_content">
                                                         <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
+                                                            <a href="#">Trang sức</a>
                                                         </div>
                                                         <h3><a href="#">Diamonds</a></h3>
                                                         <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
+                                                            <span class="old_price">45,000,000 VND</span>
+                                                            <span class="current_price">44,150,000 VND</span>
                                                         </div>
                                                         <div class="product_hover">
                                                             <div class="product_ratings">
@@ -2042,7 +1529,19 @@
                                                                 <p>This is a gold ring with diamond and Lorem ipsum
                                                                     dolor sit amet.</p>
                                                             </div>
-                                                            
+                                                            <div class="action_links">
+                                                                <ul>
+                                                                    <li><a href="#" data-placement="top"
+                                                                            title="Add to Wishlist"
+                                                                            data-toggle="tooltip"><span
+                                                                                class="ion-heart"></span></a></li>
+                                                                    <li class="add_to_cart"><a href="#"
+                                                                            title="Add to Cart">Mua hàng</a></li>
+                                                                    <li><a href="#" title="Compare"><i
+                                                                                class="ion-ios-settings-strong"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2057,18 +1556,17 @@
                                                         <div class="quick_button">
                                                             <a href="#" data-toggle="modal" data-target="#modal_box"
                                                                 data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
+                                                                data-original-title="quick view">Chi tiết</a>
                                                         </div>
                                                     </div>
                                                     <div class="product_content">
                                                         <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
+                                                            <a href="#">Trang sức</a>
                                                         </div>
                                                         <h3><a href="#">Ring</a></h3>
                                                         <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
+                                                            <span class="old_price">45,000,000 VND</span>
+                                                            <span class="current_price">44,150,000 VND</span>
                                                         </div>
                                                         <div class="product_hover">
                                                             <div class="product_ratings">
@@ -2094,7 +1592,19 @@
                                                                 <p>This is a gold ring with diamond and Lorem ipsum
                                                                     dolor sit amet.</p>
                                                             </div>
-                                                            
+                                                            <div class="action_links">
+                                                                <ul>
+                                                                    <li><a href="#" data-placement="top"
+                                                                            title="Add to Wishlist"
+                                                                            data-toggle="tooltip"><span
+                                                                                class="ion-heart"></span></a></li>
+                                                                    <li class="add_to_cart"><a href="#"
+                                                                            title="Add to Cart">Mua hàng</a></li>
+                                                                    <li><a href="#" title="Compare"><i
+                                                                                class="ion-ios-settings-strong"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2109,18 +1619,17 @@
                                                         <div class="quick_button">
                                                             <a href="#" data-toggle="modal" data-target="#modal_box"
                                                                 data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
+                                                                data-original-title="quick view">Chi tiết</a>
                                                         </div>
                                                     </div>
                                                     <div class="product_content">
                                                         <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
+                                                            <a href="#">Trang sức</a>
                                                         </div>
                                                         <h3><a href="#">Couple Ring</a></h3>
                                                         <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
+                                                            <span class="old_price">45,000,000 VND</span>
+                                                            <span class="current_price">44,150,000 VND</span>
                                                         </div>
                                                         <div class="product_hover">
                                                             <div class="product_ratings">
@@ -2146,7 +1655,19 @@
                                                                 <p>This is a gold ring with diamond and Lorem ipsum
                                                                     dolor sit amet.</p>
                                                             </div>
-                                                            
+                                                            <div class="action_links">
+                                                                <ul>
+                                                                    <li><a href="#" data-placement="top"
+                                                                            title="Add to Wishlist"
+                                                                            data-toggle="tooltip"><span
+                                                                                class="ion-heart"></span></a></li>
+                                                                    <li class="add_to_cart"><a href="#"
+                                                                            title="Add to Cart">Mua hàng</a></li>
+                                                                    <li><a href="#" title="Compare"><i
+                                                                                class="ion-ios-settings-strong"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2161,18 +1682,17 @@
                                                         <div class="quick_button">
                                                             <a href="#" data-toggle="modal" data-target="#modal_box"
                                                                 data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
+                                                                data-original-title="quick view">Chi tiết</a>
                                                         </div>
                                                     </div>
                                                     <div class="product_content">
                                                         <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
+                                                            <a href="#">Trang sức</a>
                                                         </div>
-                                                        <h3><a href="#">Bracelet</a></h3>
+                                                        <h3><a href="#">Vòng cổ</a></h3>
                                                         <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
+                                                            <span class="old_price">45,000,000 VND</span>
+                                                            <span class="current_price">44,150,000 VND</span>
                                                         </div>
                                                         <div class="product_hover">
                                                             <div class="product_ratings">
@@ -2198,7 +1718,19 @@
                                                                 <p>This is a gold ring with diamond and Lorem ipsum
                                                                     dolor sit amet.</p>
                                                             </div>
-                                                            
+                                                            <div class="action_links">
+                                                                <ul>
+                                                                    <li><a href="#" data-placement="top"
+                                                                            title="Add to Wishlist"
+                                                                            data-toggle="tooltip"><span
+                                                                                class="ion-heart"></span></a></li>
+                                                                    <li class="add_to_cart"><a href="#"
+                                                                            title="Add to Cart">Mua hàng</a></li>
+                                                                    <li><a href="#" title="Compare"><i
+                                                                                class="ion-ios-settings-strong"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2213,18 +1745,17 @@
                                                         <div class="quick_button">
                                                             <a href="#" data-toggle="modal" data-target="#modal_box"
                                                                 data-placement="top"
-                                                                data-original-title="quick view">Quick View</a>
+                                                                data-original-title="quick view">Chi tiết</a>
                                                         </div>
                                                     </div>
                                                     <div class="product_content">
                                                         <div class="tag_cate">
-                                                            <a href="#">Ring, Necklace</a>
-                                                            <a href="#">Earrings</a>
+                                                            <a href="#">Trang sức</a>
                                                         </div>
-                                                        <h3><a href="#">Necklace Set</a></h3>
+                                                        <h3><a href="#">Vòng cổ Set</a></h3>
                                                         <div class="price_box">
-                                                            <span class="old_price">Rs. 45654</span>
-                                                            <span class="current_price">Rs. 44015</span>
+                                                            <span class="old_price">45,000,000 VND</span>
+                                                            <span class="current_price">44,150,000 VND</span>
                                                         </div>
                                                         <div class="product_hover">
                                                             <div class="product_ratings">
@@ -2250,7 +1781,19 @@
                                                                 <p>This is a gold ring with diamond and Lorem ipsum
                                                                     dolor sit amet.</p>
                                                             </div>
-                                                            
+                                                            <div class="action_links">
+                                                                <ul>
+                                                                    <li><a href="#" data-placement="top"
+                                                                            title="Add to Wishlist"
+                                                                            data-toggle="tooltip"><span
+                                                                                class="ion-heart"></span></a></li>
+                                                                    <li class="add_to_cart"><a href="#"
+                                                                            title="Add to Cart">Mua hàng</a></li>
+                                                                    <li><a href="#" title="Compare"><i
+                                                                                class="ion-ios-settings-strong"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2268,20 +1811,7 @@
         <!-- product section area sends -->
 
         <!-- banner full width start -->
-        <section class="banner_fullwidth black_fullwidth">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-12">
-                        <div class="banner_text">
-                            <p>Sale Off 20% All Products</p>
-                            <h2>New Trending Collection</h2>
-                            <span>Best Design makes you more special.</span>
-                            <a href="#">Shop Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+       
         <!-- banner full width end -->
 
         <!-- product section area starts  -->
@@ -2290,7 +1820,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="section_title">
-                            <h2>Bestselling Products</h2>
+                            <h2>Sản phẩm bán chạy</h2>
                         </div>
                     </div>
                     <div class="col-12">
@@ -2306,19 +1836,17 @@
                                                         alt="product1"></a>
                                                 <div class="quick_button">
                                                     <a href="#" data-toggle="modal" data-target="#modal_box"
-                                                        data-placement="top" data-original-title="quick view">Quick
-                                                        View</a>
+                                                        data-placement="top" data-original-title="quick view">Chi tiết</a>
                                                 </div>
                                             </div>
                                             <div class="product_content">
                                                 <div class="tag_cate">
-                                                    <a href="#">Ring, Necklace,</a>
-                                                    <a href="#">Earrings</a>
+                                                    <a href="#">Trang sức</a>
                                                 </div>
-                                                <h3><a href="#">Necklace Set</a></h3>
+                                                <h3><a href="#">Vòng cổ Set</a></h3>
                                                 <div class="price_box">
-                                                    <span class="old_price">Rs. 45654</span>
-                                                    <span class="current_price">Rs. 44015</span>
+                                                    <span class="old_price">45,000,000 VND</span>
+                                                    <span class="current_price">44,150,000 VND</span>
                                                 </div>
                                                 <div class="product_hover">
                                                     <div class="product_ratings">
@@ -2339,7 +1867,18 @@
                                                         <p>This is a gold ring with diamond and Lorem ipsum
                                                             dolor sit amet.</p>
                                                     </div>
-                                                    
+                                                    <div class="action_links">
+                                                        <ul>
+                                                            <li><a href="#" data-placement="top" title="Add to Wishlist"
+                                                                    data-toggle="tooltip"><span
+                                                                        class="ion-heart"></span></a></li>
+                                                            <li class="add_to_cart"><a href="#" title="Add to Cart">Mua
+                                                                    hàng</a></li>
+                                                            <li><a href="#" title="Compare"><i
+                                                                        class="ion-ios-settings-strong"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -2359,13 +1898,12 @@
                                             </div>
                                             <div class="product_content">
                                                 <div class="tag_cate">
-                                                    <a href="#">Ring, Necklace,</a>
-                                                    <a href="#">Earrings</a>
+                                                    <a href="#">Trang sức</a>
                                                 </div>
-                                                <h3><a href="#">Necklace Set</a></h3>
+                                                <h3><a href="#">Vòng cổ Set</a></h3>
                                                 <div class="price_box">
-                                                    <span class="old_price">Rs. 45654</span>
-                                                    <span class="current_price">Rs. 44015</span>
+                                                    <span class="old_price">45,000,000 VND</span>
+                                                    <span class="current_price">44,150,000 VND</span>
                                                 </div>
                                                 <div class="product_hover">
                                                     <div class="product_ratings">
@@ -2386,7 +1924,18 @@
                                                         <p>This is a gold ring with diamond and Lorem ipsum
                                                             dolor sit amet.</p>
                                                     </div>
-                                                    
+                                                    <div class="action_links">
+                                                        <ul>
+                                                            <li><a href="#" data-placement="top" title="Add to Wishlist"
+                                                                    data-toggle="tooltip"><span
+                                                                        class="ion-heart"></span></a></li>
+                                                            <li class="add_to_cart"><a href="#" title="Add to Cart">Mua
+                                                                    hàng</a></li>
+                                                            <li><a href="#" title="Compare"><i
+                                                                        class="ion-ios-settings-strong"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -2406,13 +1955,12 @@
                                             </div>
                                             <div class="product_content">
                                                 <div class="tag_cate">
-                                                    <a href="#">Ring, Necklace,</a>
-                                                    <a href="#">Earrings</a>
+                                                    <a href="#">Trang sức</a>
                                                 </div>
-                                                <h3><a href="#">Necklace Set</a></h3>
+                                                <h3><a href="#">Vòng cổ Set</a></h3>
                                                 <div class="price_box">
-                                                    <span class="old_price">Rs. 45654</span>
-                                                    <span class="current_price">Rs. 44015</span>
+                                                    <span class="old_price">45,000,000 VND</span>
+                                                    <span class="current_price">44,150,000 VND</span>
                                                 </div>
                                                 <div class="product_hover">
                                                     <div class="product_ratings">
@@ -2433,7 +1981,18 @@
                                                         <p>This is a gold ring with diamond and Lorem ipsum
                                                             dolor sit amet.</p>
                                                     </div>
-                                                    
+                                                    <div class="action_links">
+                                                        <ul>
+                                                            <li><a href="#" data-placement="top" title="Add to Wishlist"
+                                                                    data-toggle="tooltip"><span
+                                                                        class="ion-heart"></span></a></li>
+                                                            <li class="add_to_cart"><a href="#" title="Add to Cart">Mua
+                                                                    hàng</a></li>
+                                                            <li><a href="#" title="Compare"><i
+                                                                        class="ion-ios-settings-strong"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -2453,13 +2012,12 @@
                                             </div>
                                             <div class="product_content">
                                                 <div class="tag_cate">
-                                                    <a href="#">Ring, Necklace,</a>
-                                                    <a href="#">Earrings</a>
+                                                    <a href="#">Trang sức</a>
                                                 </div>
-                                                <h3><a href="#">Necklace Set</a></h3>
+                                                <h3><a href="#">Vòng cổ Set</a></h3>
                                                 <div class="price_box">
-                                                    <span class="old_price">Rs. 45654</span>
-                                                    <span class="current_price">Rs. 44015</span>
+                                                    <span class="old_price">45,000,000 VND</span>
+                                                    <span class="current_price">44,150,000 VND</span>
                                                 </div>
                                                 <div class="product_hover">
                                                     <div class="product_ratings">
@@ -2480,7 +2038,18 @@
                                                         <p>This is a gold ring with diamond and Lorem ipsum
                                                             dolor sit amet.</p>
                                                     </div>
-                                                    
+                                                    <div class="action_links">
+                                                        <ul>
+                                                            <li><a href="#" data-placement="top" title="Add to Wishlist"
+                                                                    data-toggle="tooltip"><span
+                                                                        class="ion-heart"></span></a></li>
+                                                            <li class="add_to_cart"><a href="#" title="Add to Cart">Mua
+                                                                    hàng</a></li>
+                                                            <li><a href="#" title="Compare"><i
+                                                                        class="ion-ios-settings-strong"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -2500,13 +2069,12 @@
                                             </div>
                                             <div class="product_content">
                                                 <div class="tag_cate">
-                                                    <a href="#">Ring, Necklace,</a>
-                                                    <a href="#">Earrings</a>
+                                                    <a href="#">Trang sức</a>
                                                 </div>
-                                                <h3><a href="#">Necklace Set</a></h3>
+                                                <h3><a href="#">Vòng cổ Set</a></h3>
                                                 <div class="price_box">
-                                                    <span class="old_price">Rs. 45654</span>
-                                                    <span class="current_price">Rs. 44015</span>
+                                                    <span class="old_price">45,000,000 VND</span>
+                                                    <span class="current_price">44,150,000 VND</span>
                                                 </div>
                                                 <div class="product_hover">
                                                     <div class="product_ratings">
@@ -2527,295 +2095,22 @@
                                                         <p>This is a gold ring with diamond and Lorem ipsum
                                                             dolor sit amet.</p>
                                                     </div>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="custom-col-5">
-                                        <div class="single_product">
-                                            <div class="product_thumb">
-                                                <a href="#" class="primary_img"><img src="images/product/28.jpg"
-                                                        alt="product1"></a>
-                                                <a href="#" class="secondary_img"><img src="images/product/29.jpg"
-                                                        alt="product1"></a>
-                                                <div class="quick_button">
-                                                    <a href="#" data-toggle="modal" data-target="#modal_box"
-                                                        data-placement="top" data-original-title="quick view">Quick
-                                                        View</a>
-                                                </div>
-                                            </div>
-                                            <div class="product_content">
-                                                <div class="tag_cate">
-                                                    <a href="#">Ring, Necklace,</a>
-                                                    <a href="#">Earrings</a>
-                                                </div>
-                                                <h3><a href="#">Necklace Set</a></h3>
-                                                <div class="price_box">
-                                                    <span class="old_price">Rs. 45654</span>
-                                                    <span class="current_price">Rs. 44015</span>
-                                                </div>
-                                                <div class="product_hover">
-                                                    <div class="product_ratings">
+                                                    <div class="action_links">
                                                         <ul>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
+                                                            <li><a href="#" data-placement="top" title="Add to Wishlist"
+                                                                    data-toggle="tooltip"><span
+                                                                        class="ion-heart"></span></a></li>
+                                                            <li class="add_to_cart"><a href="#" title="Add to Cart">Mua
+                                                                    hàng</a></li>
+                                                            <li><a href="#" title="Compare"><i
+                                                                        class="ion-ios-settings-strong"></i></a>
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div class="product_desc">
-                                                        <p>This is a gold ring with diamond and Lorem ipsum
-                                                            dolor sit amet.</p>
-                                                    </div>
-                                                    
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="custom-col-5">
-                                        <div class="single_product">
-                                            <div class="product_thumb">
-                                                <a href="#" class="primary_img"><img src="images/product/32.jpg"
-                                                        alt="product1"></a>
-                                                <a href="#" class="secondary_img"><img src="images/product/33.jpg"
-                                                        alt="product1"></a>
-                                                <div class="quick_button">
-                                                    <a href="#" data-toggle="modal" data-target="#modal_box"
-                                                        data-placement="top" data-original-title="quick view">Quick
-                                                        View</a>
-                                                </div>
-                                            </div>
-                                            <div class="product_content">
-                                                <div class="tag_cate">
-                                                    <a href="#">Ring, Necklace,</a>
-                                                    <a href="#">Earrings</a>
-                                                </div>
-                                                <h3><a href="#">Necklace Set</a></h3>
-                                                <div class="price_box">
-                                                    <span class="old_price">Rs. 45654</span>
-                                                    <span class="current_price">Rs. 44015</span>
-                                                </div>
-                                                <div class="product_hover">
-                                                    <div class="product_ratings">
-                                                        <ul>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="product_desc">
-                                                        <p>This is a gold ring with diamond and Lorem ipsum
-                                                            dolor sit amet.</p>
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="custom-col-5">
-                                        <div class="single_product">
-                                            <div class="product_thumb">
-                                                <a href="#" class="primary_img"><img src="images/product/34.jpg"
-                                                        alt="product1"></a>
-                                                <a href="#" class="secondary_img"><img src="images/product/35.jpg"
-                                                        alt="product1"></a>
-                                                <div class="quick_button">
-                                                    <a href="#" data-toggle="modal" data-target="#modal_box"
-                                                        data-placement="top" data-original-title="quick view">Quick
-                                                        View</a>
-                                                </div>
-                                            </div>
-                                            <div class="product_content">
-                                                <div class="tag_cate">
-                                                    <a href="#">Ring, Necklace,</a>
-                                                    <a href="#">Earrings</a>
-                                                </div>
-                                                <h3><a href="#">Necklace Set</a></h3>
-                                                <div class="price_box">
-                                                    <span class="old_price">Rs. 45654</span>
-                                                    <span class="current_price">Rs. 44015</span>
-                                                </div>
-                                                <div class="product_hover">
-                                                    <div class="product_ratings">
-                                                        <ul>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="product_desc">
-                                                        <p>This is a gold ring with diamond and Lorem ipsum
-                                                            dolor sit amet.</p>
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="custom-col-5">
-                                        <div class="single_product">
-                                            <div class="product_thumb">
-                                                <a href="#" class="primary_img"><img src="images/product/38.jpg"
-                                                        alt="product1"></a>
-                                                <a href="#" class="secondary_img"><img src="images/product/39.jpg"
-                                                        alt="product1"></a>
-                                                <div class="quick_button">
-                                                    <a href="#" data-toggle="modal" data-target="#modal_box"
-                                                        data-placement="top" data-original-title="quick view">Quick
-                                                        View</a>
-                                                </div>
-                                            </div>
-                                            <div class="product_content">
-                                                <div class="tag_cate">
-                                                    <a href="#">Ring, Necklace,</a>
-                                                    <a href="#">Earrings</a>
-                                                </div>
-                                                <h3><a href="#">Necklace Set</a></h3>
-                                                <div class="price_box">
-                                                    <span class="old_price">Rs. 45654</span>
-                                                    <span class="current_price">Rs. 44015</span>
-                                                </div>
-                                                <div class="product_hover">
-                                                    <div class="product_ratings">
-                                                        <ul>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="product_desc">
-                                                        <p>This is a gold ring with diamond and Lorem ipsum
-                                                            dolor sit amet.</p>
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="custom-col-5">
-                                        <div class="single_product">
-                                            <div class="product_thumb">
-                                                <a href="#" class="primary_img"><img src="images/product/40.jpg"
-                                                        alt="product1"></a>
-                                                <a href="#" class="secondary_img"><img src="images/product/41.jpg"
-                                                        alt="product1"></a>
-                                                <div class="quick_button">
-                                                    <a href="#" data-toggle="modal" data-target="#modal_box"
-                                                        data-placement="top" data-original-title="quick view">Quick
-                                                        View</a>
-                                                </div>
-                                            </div>
-                                            <div class="product_content">
-                                                <div class="tag_cate">
-                                                    <a href="#">Ring, Necklace,</a>
-                                                    <a href="#">Earrings</a>
-                                                </div>
-                                                <h3><a href="#">Necklace Set</a></h3>
-                                                <div class="price_box">
-                                                    <span class="old_price">Rs. 45654</span>
-                                                    <span class="current_price">Rs. 44015</span>
-                                                </div>
-                                                <div class="product_hover">
-                                                    <div class="product_ratings">
-                                                        <ul>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="product_desc">
-                                                        <p>This is a gold ring with diamond and Lorem ipsum
-                                                            dolor sit amet.</p>
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="custom-col-5">
-                                        <div class="single_product">
-                                            <div class="product_thumb">
-                                                <a href="#" class="primary_img"><img src="images/product/42.jpg"
-                                                        alt="product1"></a>
-                                                <a href="#" class="secondary_img"><img src="images/product/43.jpg"
-                                                        alt="product1"></a>
-                                                <div class="quick_button">
-                                                    <a href="#" data-toggle="modal" data-target="#modal_box"
-                                                        data-placement="top" data-original-title="quick view">Quick
-                                                        View</a>
-                                                </div>
-                                            </div>
-                                            <div class="product_content">
-                                                <div class="tag_cate">
-                                                    <!-- make this corection in all products above -->
-                                                    <a href="#">Ring, Necklace,</a>
-                                                    <a href="#">Earrings</a>
-                                                </div>
-                                                <h3><a href="#">Necklace Set</a></h3>
-                                                <div class="price_box">
-                                                    <span class="old_price">Rs. 45654</span>
-                                                    <span class="current_price">Rs. 44015</span>
-                                                </div>
-                                                <div class="product_hover">
-                                                    <div class="product_ratings">
-                                                        <ul>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                            <li><a href="#"><i class="ion-ios-star-outline"></i></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="product_desc">
-                                                        <p>This is a gold ring with diamond and Lorem ipsum
-                                                            dolor sit amet.</p>
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                 </div>
                             </div>
                         </div>
@@ -2823,47 +2118,18 @@
                 </div>
             </div>
         </section>
-        <!-- product section area ends  -->
-       
-        <!-- banner area starts  -->
-        <section class="banner_section banner_section_five">
-            <div class="container-fluid p-0">
-                <div class="row no-gutters">
-                    <div class="col-lg-6 col-md-12">
-                        <div class="port-box">
-                            <div class="text-overlay">
-                                <h1>New Arrivals 2020</h1>
-                                <p>Crown for wife</p>
-                            </div>
-                            <img src="images/banner/1.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <div class="port-box">
-                            <div class="text-overlay">
-                                <h1>Featured Products 2020</h1>
-                                <p>Pendant for Valentine</p>
-                            </div>
-                            <img src="images/banner/2.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- banner area ends -->
-
-        <!-- footer section starts -->
+        
         <footer class="footer_widgets footer_black">
             <div class="container">
                 <div class="footer_top">
                     <div class="row">
                         <div class="col-lg-4 col-md-6 col-sm-8">
                             <div class="widgets_container contact_us">
-                                <h3>About Ashirwaad</h3>
+                                <h3>LUXURY</h3>
                                 <div class="footer_contact">
-                                    <p>Address : Ashirwaad palace, Surat, Gujarat</p>
-                                    <p>Phone : <a href="tel:(+91)888888885555">(+91)888888885555</a></p>
-                                    <p>Email : ashirwaadjewlers@gmail.com</p>
+                                    <p>Địa chỉ : 78 Hoàng Hoa Thám, Quận cam, TP.HCM /p>
+                                    <p>Liên hệ : <a href="tel:(+91)888888885555">(+91)888888885555</a></p>
+                                    <p>Email : LUXURYJW@gmail.com</p>
                                     <ul>
                                         <li><a href="#"><i class="ion-social-facebook"></i></a></li>
                                         <li><a href="#"><i class="ion-social-twitter"></i></a></li>
@@ -2874,88 +2140,16 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-6 col-sm-4 col-6">
-                            <div class="widgets_container widget_menu">
-                                <h3>Information</h3>
-                                <div class="footer_menu">
-                                    <ul>
-                                        <li><a href="#">About Us</a></li>
-                                        <li><a href="#">Blog</a></li>
-                                        <li><a href="#">Contact</a></li>
-                                        <li><a href="#">Services</a></li>
-                                        <li><a href="#">Collection</a></li>
-                                        <li><a href="#">Portfolio</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-6 col-sm-5 col-6">
-                            <div class="widgets_container widget_menu">
-                                <h3>My Account</h3>
-                                <div class="footer_menu">
-                                    <ul>
-                                        <li><a href="#">My Account</a></li>
-                                        <li><a href="#">Contact</a></li>
-                                        <li><a href="#">Wishlist</a></li>
-                                        <li><a href="#">Portfolio</a></li>
-                                        <li><a href="#">Checkout</a></li>
-                                        <li><a href="#">Frequently Questions</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="col-lg-4 col-md-6 col-sm-7">
-                            <div class="widgets_container product_widget">
-                                <h3>Top Rated Products</h3>
-                                <div class="simple_product">
-                                    <div class="simple_product_items">
-                                        <div class="simple_product_thumb">
-                                            <a href="#"><img src="images/product/14.jpg" alt=""></a>
-                                        </div>
-                                        <div class="simple_product_content">
-                                            <div class="tag_cate">
-                                                <a href="#">Women,</a>
-                                                <a href="#">Earrings</a>
-                                            </div>
-                                            <div class="product_name">
-                                                <h3><a href="#">Bracelet</a></h3>
-                                            </div>
-                                            <div class="product_price">
-                                                <span class="old_price">Rs. 45612.54</span>
-                                                <span class="current_price">Rs. 41612.54</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="simple_product_items">
-                                        <div class="simple_product_thumb">
-                                            <a href="#"><img src="images/product/28.jpg" alt=""></a>
-                                        </div>
-                                        <div class="simple_product_content">
-                                            <div class="tag_cate">
-                                                <a href="#">Women,</a>
-                                                <a href="#">Earrings</a>
-                                            </div>
-                                            <div class="product_name">
-                                                <h3><a href="#">Ring</a></h3>
-                                            </div>
-                                            <div class="product_price">
-                                                <span class="old_price">Rs. 75612.54</span>
-                                                <span class="current_price">Rs. 71612.54</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
                 <div class="footer_bottom">
                     <div class="row">
                         <div class="col-12">
-                            <div class="copyright_area">
-                                <p>Copyright &copy; 2020 <a href="#">Nhóm 2</a> All rights Reserved.</p>
-                                
-                            </div>
+                          
                         </div>
                     </div>
                 </div>
@@ -2999,48 +2193,24 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="modal_tab_button">
-                                        <ul class="nav product_navactive owl-carousel" role="tablist">
-                                            <li>
-                                                <a href="#tab1" class="nav-link active" data-toggle="tab" role="tab"
-                                                    aria-controls="tab1" aria-selected="false"><img
-                                                        src="images/product/70.jpg" alt=""></a>
-                                            </li>
-                                            <li>
-                                                <a href="#tab2" class="nav-link" data-toggle="tab" role="tab"
-                                                    aria-controls="tab2" aria-selected="false"><img
-                                                        src="images/product/71.jpg" alt=""></a>
-                                            </li>
-                                            <li>
-                                                <a href="#tab3" class="nav-link button_three" data-toggle="tab"
-                                                    role="tab" aria-controls="tab3" aria-selected="false"><img
-                                                        src="images/product/72.jpg" alt=""></a>
-                                            </li>
-                                            <li>
-                                                <a href="#tab4" class="nav-link" data-toggle="tab" role="tab"
-                                                    aria-controls="tab4" aria-selected="false"><img
-                                                        src="images/product/73.jpg" alt=""></a>
-                                            </li>
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-7 col-md-7 col-sm-12">
                                 <div class="modal_right">
                                     <div class="modal_title mb-10">
-                                        <h2>Women's Necklace</h2>
+                                        <h2>Vòng cổ nữ</h2>
                                     </div>
                                     <div class="modal_price mb-10">
-                                        <span class="new_price">Rs. 51164</span>
-                                        <span class="old_price">Rs. 54164</span>
+                                        <span class="new_price">50,000,000</span>
+                                        <span class="old_price">54,000,000</span>
                                     </div>
                                     <div class="see_all">
-                                        <a href="#">See All Features</a>
+                                        <a href="#">Trang sức nổi bật</a>
                                     </div>
                                     <div class="modal_add_to_cart mb-15">
                                         <form action="#">
                                             <input type="number" min="0" max="100" step="1">
-                                            <button type="submit">Add To Cart</button>
+                                            <button type="submit">Mua hàng</button>
                                         </form>
                                     </div>
                                     <div class="modal_description mb-15">
@@ -3049,7 +2219,7 @@
                                             voluptatibus voluptatem, ipsa incidunt fugiat a.</p>
                                     </div>
                                     <div class="modal_social">
-                                        <h2>Share this Product</h2>
+                                        <h2>Chia sẻ sản phẩm</h2>
                                         <ul>
                                             <li><a href="#"><i class="ion-social-facebook"></i></a></li>
                                             <li><a href="#"><i class="ion-social-twitter"></i></a></li>
@@ -3073,7 +2243,7 @@
 
 
 
-   
+
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <!-- JavaScript Bundle with Popper.js -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
@@ -3081,16 +2251,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
-    <script src="./Public/JS/main.js"></script>
-    <script src="./Public/JS/login.js"></script>
-    <!-- <script>
-$(document).ready(function(){
-  $("#myBtn").click(function(){
-    $("#myModal").modal();
-  });
-});
-</script> -->
-<script src="./Public/JS/script.js"></script>
+    <script src="http://localhost/Web%20qu%e1%ba%a3n%20l%c3%bd/Public/JS/main.js"></script>
 </body>
 
 </html>

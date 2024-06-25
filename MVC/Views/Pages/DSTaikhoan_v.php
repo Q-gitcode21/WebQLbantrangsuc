@@ -30,7 +30,7 @@
                                              
             </div>
             <div class="input-group">
-            <input type="search" placeholder="Tên đăng nhập" name="txtTKTen" value="<?php if(isset($data['tendn'])) echo $data['tendn']?>">
+            <input type="search" placeholder="quyền" name="txtTKQuyen" value="<?php if(isset($data['quyen'])) echo $data['quyen']?>">
  
             </div>
             <button style="border: none; background: transparent;" type="submit" name="btnTimkiem"><i class="fa fa-search" ></i></button>
@@ -64,9 +64,9 @@
                     <tr>
                         <th> Id <span class="icon-arrow">&UpArrow;</span></th>
                         <th> Email <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Tên đăng nhập <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Quyền <span class="icon-arrow">&UpArrow;</span></th>
                         <th> Mật khẩu <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Ngày tạo <span class="icon-arrow">&UpArrow;</span></th>
+                        
                         <th style="padding-left:50px"> Chức năng <span class="icon-arrow">&UpArrow;</span></th>
                     </tr>
                 </thead>
@@ -83,9 +83,9 @@
                                                 <?php echo $row['Id']?>
                                             </td>
                                             <td> <?php echo $row['Email']?> </td>
-                                            <td> <?php echo $row['Tendn']?> </td>
+                                            <td> <?php echo $row['Quyen']?> </td>
                                             <td> <?php echo $row['Matkhau']?> </td>
-                                            <td> <?php echo $row['Ngaytao']?> </td>
+                                           
                                            
                                            
                                             <td class="btn_cn">

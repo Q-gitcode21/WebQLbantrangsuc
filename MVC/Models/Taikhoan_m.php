@@ -1,13 +1,14 @@
 <!-- truy van sql -->
 <?php 
 class Taikhoan_m extends connectDB{
-    function taikhoan_ins($id,$email,$tdn,$mk,$nt){
-        $sql="INSERT INTO taikhoan VALUES ('$id','$email','$tdn','$mk','$nt')";
-         return mysqli_query($this->con,$sql);
-        
+    function taikhoan_ins($email,$mk,$quyen){
+        $sql="INSERT INTO taikhoan (Email, Matkhau, Quyen)  VALUES ('$email','$mk',N'$quyen')";
+        return mysqli_query($this->con,$sql);
     }
-    function checktrungid($id){
-        $sql="SELECT * FROM taikhoan WHERE Id='$id'";
+     // hàm thêm mới
+
+    function checktrungemail($email){
+        $sql="SELECT * FROM taikhoan WHERE Email='$email'";
         $dl=mysqli_query($this->con,$sql);
         $kq=false;
         if(mysqli_num_rows($dl)>0){
@@ -15,18 +16,18 @@ class Taikhoan_m extends connectDB{
         }
         return $kq;
     }
-    function taikhoan_find($id,$tdn){
+    function taikhoan_find($id,$quyen){
         // trường hợp loaddata
-        if (empty($id) && empty($tdn)) {
+        if (empty($id) && empty($quyen)) {
             $sql = "SELECT * FROM taikhoan";
         } 
         // trường hợp sửa dl
-        elseif (empty($tdn)) {
+        elseif (empty($quyen)) {
             $sql = "SELECT * FROM taikhoan WHERE Id = '$id'";
         }
         // trường hợp tìm kiếm
          else {
-            $sql = "SELECT * FROM taikhoan WHERE Id LIKE '%$id%' AND Tendn LIKE '%$tdn%'";
+            $sql = "SELECT * FROM taikhoan WHERE Id LIKE '%$id%' AND Quyen LIKE '%$quyen%'";
         }
        
         return mysqli_query($this->con,$sql);
@@ -36,11 +37,12 @@ class Taikhoan_m extends connectDB{
         $sql="DELETE FROM taikhoan WHERE Id='$id'";
         return mysqli_query($this->con,$sql);
     }
-    function taikhoan_upd($id,$email,$tdn,$mk,$nt){
-        $sql="UPDATE taikhoan SET Email='$email',Tendn='$tdn',Matkhau='$mk',Ngaytao='$nt'
+    function taikhoan_upd($id,$email,$quyen,$mk){
+        $sql="UPDATE taikhoan SET Email='$email',quyen='$quyen',Matkhau='$mk'
         WHERE Id='$id'";
         return mysqli_query($this->con,$sql);
     }
+    
     
 }
 ?>

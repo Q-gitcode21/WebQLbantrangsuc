@@ -18,13 +18,8 @@
     <div class="form-box login">
             <h2>Sửa tài khoản</h2>
             <form action="#">
-                <div class="input-box">
-                    <span class="icon">
-                    <img src="./Public/Picture/id-card_9424609.png" alt="" width="15px">
-                    </span>
-                    <input type="text" required name="txtId" value="<?php  echo $row['Id']?>" readonly>
-                    <label>ID</label>
-                </div>            
+                        <!-- thẻ ẩn lưu tt id  -->
+                 <input type="hidden" name="txtId" value="<?php echo $row['Id'] ?>">     
                 <div class="input-box">
                     <span class="icon">
                         <img src="./Public/Picture/Pic_login/email.png" alt="" width="15px">
@@ -36,8 +31,8 @@
                     <span class="icon">
                         <img src="./Public/Picture/Pic_login/user.png" alt="" width="15px">
                     </span>
-                    <input type="text" required name="txtTendangnhap" value="<?php  echo $row['Tendn']?>">
-                    <label>Tên đăng nhập</label>
+                    <input readonly style="padding: 0 5px 0 90px;" type="text" name="txtQuyen" value="<?php  echo $row['Quyen']?>">
+                    <label>Quyền</label>
                 </div>
                 <div class="input-box">
                     <span class="icon">
@@ -46,11 +41,7 @@
                     <input type="password" required name="txtMatkhau" value="<?php  echo $row['Matkhau']?>">
                     <label>Password</label>
                 </div>
-                <div class="input-box">
-                    
-                    <input style="padding: 0 5px 0 90px;" type="date" required name="dateNgaytao" value="<?php  echo $row['Ngaytao']?>">
-                    <label>Ngày tạo</label>
-                </div>
+                
                 
                 <button type="submit" class="btn" name="btnLuu">Lưu</button>
                 <?php

@@ -34,7 +34,7 @@
                         <span class="icon">
                             <img src="./Public/Picture/Pic_login/user.png" alt="" width="15px">
                         </span>
-                        <input type="text" required name="txtTendangnhap" value="<?php echo $row['Tendn'] ?>">
+                        <input type="text" required name="txtQuyen" value="<?php echo $row['quyen'] ?>">
                         <label>Tên đăng nhập</label>
                     </div>
                     <div class="input-box">

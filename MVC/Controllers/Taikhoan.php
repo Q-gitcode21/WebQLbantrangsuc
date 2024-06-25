@@ -2,9 +2,11 @@
  <?php 
  class Taikhoan extends controller{
     private $taikhoan;
+    private $check;
     function __construct()
     {
         $this->taikhoan=$this->model('Taikhoan_m');
+        $this->check=$this->model('Dangky_m');
         // khởi tạo đối tượng model('Taikhoan_m') gán cho $taikhoan
     }
     function Get_data(){
@@ -13,14 +15,14 @@
     }
     function themmoi(){
         if(isset($_POST['btnLuu'])){
-            $id=$_POST['txtId'];
+            
             $email=$_POST['txtEmail'];
-            $tdn=$_POST['txtTendangnhap'];
+            $quyen=$_POST['txtQuyen'];
             $mk=$_POST['txtMatkhau'];
-            $nt=$_POST['dateNgaytao'];
+           
             
             // Kiem tra trung id
-            $kq1=$this->taikhoan->checktrungid($id);
+            $kq1=$this->check->checktrungemail($email);
             
             if($kq1){
                 echo'<script>alert("Trùng ID");
@@ -29,8 +31,7 @@
                 
             }
             else{
-                    // gọi hàm chèn dl taikhoan_ins trong model tacgia_m
-            $kq=$this->taikhoan->taikhoan_ins($id,$email,$tdn,$mk,$nt);
+            $kq=$this->taikhoan->taikhoan_ins($email,$mk,$quyen);
             if($kq){
                 echo '<script>
                 alert("Thêm mới thành công");
@@ -58,10 +59,10 @@
             for($i=2;$i<=count($sheetData);$i++){
                 $id=$sheetData[$i]["A"];
                 $email=$sheetData[$i]["B"];
-                $tdn=$sheetData[$i]["C"];
+                $quyen=$sheetData[$i]["C"];
                 $mk=$sheetData[$i]["D"];
                 $nt=$sheetData[$i]["E"];
-                $this->taikhoan->taikhoan_ins($id,$email,$tdn,$mk,$nt);
+                $this->taikhoan->taikhoan_ins($id,$email,$quyen,$mk,$nt);
             }
             echo '<script>
                 alert("Thêm mới thành công");

@@ -189,11 +189,11 @@
 
                 </div>
                 <div class="input-box">
-                  <select name="selectTrangthai">
-                  <option selected value="0">Chọn trạng thái</option>
+                  <select aria-readonly="true" name="selectTrangthai">
+                  <!-- <option selected value="0">Chọn trạng thái</option> -->
                   <option value="Đang vận chuyển">Đang vận chuyển</option>
-                  <option value="Thành công">Thành công</option>
-                  <option value="Không thành công">Không thành công</option>  
+                  <!-- <option value="Thành công">Thành công</option>
+                  <option value="Không thành công">Không thành công</option>   -->
                 </select>
 
                 </div>
