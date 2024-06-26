@@ -8,12 +8,13 @@
         // khởi tạo đối tượng model('khachhang_m') gán cho $khachhang
     }
     function Get_data(){
+       
         $this->view('Masterlayout',['page'=>'khachhang_them']);
         // gọi giao diện chính và truyền dữ liệu page là trang khachhang view
     }
     function themmoi(){
-        if(isset($_POST['btnLuu'])){
-            
+        if(isset($_POST['btnKHmoi'])){
+            $id=$_POST['txtId'];
             $tenkhachhang=$_POST['txttenkhachhang'];
             $gioitinh=$_POST['txtgioitinh'];
             $diachi=$_POST['txtdiachi'];
@@ -25,18 +26,19 @@
            
             
                     // gọi hàm chèn dl khachhang_ins trong model tacgia_m
-            $kq=$this->khachhang->khachhang_ins($tenkhachhang,$gioitinh,$diachi,$sdt,$ngaysinh);
+            $kq=$this->khachhang->khachhang_upd($id,$tenkhachhang,$gioitinh,$diachi,$sdt,$ngaysinh);
+            
             if($kq){
                 echo '<script>
                 alert("Đăng ký thành công");
-                window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/khachhang";
+                window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Login";
                 </script>';
                 // hiện thị alert trc khi chuyển trang
     exit();
                 
             }
             else
-                echo'<script>alert("Thêm mới thất bại")</script>';
+                echo'<script>alert("Đăng ký thất bại")</script>';
             }
            
             // gọi lại giao diện

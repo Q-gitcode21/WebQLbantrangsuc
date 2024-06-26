@@ -14,12 +14,17 @@
     <link rel="stylesheet" href="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Public/CSS/dulieu.css">
 </head>
 <body>
-    <form id="myForm" method="post" action="./khachhang/themmoi">
+    <form id="myForm" method="post" action="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/khachhang/themmoi">
     <div class="content">
     <div class="form-box login">
             <h2>Đăng ký thông tin</h2>
+            <?php
+            if (isset($data['getId']) && mysqli_num_rows($data['getId'])>0){
+                
+                while($row=mysqli_fetch_array($data['getId'])){
+                    ?>
             <form action="#">
-       
+            <input type="hidden" name="txtId" value="<?php echo $row['Id']?>">    
                 <div class="input-box">
                     <span class="icon">
                         <img src="./Public/Picture/Pic_login/email.png" alt="" width="15px">
@@ -56,7 +61,10 @@
                 
                 <button type="submit" class="btn" name="btnKHmoi">Lưu</button>
                 
-        
+                <?php
+                    }
+            }
+            ?> 
                 
                 
                 

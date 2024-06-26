@@ -15,5 +15,10 @@ class Dangky_m extends connectDB{
         }
         return $kq;
     }
+    function getId($email){
+        $sql = "SELECT Id FROM taikhoan Where Email='$email'";
+        return  mysqli_query($this->con,$sql); 
+        
+    }
 }
 ?>

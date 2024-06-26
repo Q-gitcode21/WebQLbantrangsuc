@@ -29,9 +29,10 @@ class Dangky extends controller{
                 if($kq){
                     echo '<script>
                     alert("Đăng ký thành công");
-
                     </script>';
-                    $this->view('Dangkykhmoi_v');
+                    $id=$this->dangky->getId($email);
+                    
+                    $this->view('Dangkykhmoi_v',['getId'=> $id]);
                     // hiện thị alert trc khi chuyển trang gọi lại link thêm khách hàng
                      exit();
                 }
@@ -47,6 +48,7 @@ class Dangky extends controller{
             }
         }
     }
+    
 }
 
 
