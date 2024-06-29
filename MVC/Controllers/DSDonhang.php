@@ -107,48 +107,45 @@
     
     
     }
-    function xoa($madonhang){
-        $kq=$this->qlhh->donhang_del($madonhang);
-        if($kq){
-            echo '<script>
-            alert("Xóa thành công");
-            window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSDonhang";
-                </script>';
-    exit();
-        }
-        else{
-            echo'<script>alert("Xóa thất bại")</script>';
-        }
+    // function xoa($madonhang){
+    //     $kq=$this->qlhh->donhang_del($madonhang);
+    //     if($kq){
+    //         echo '<script>
+    //         alert("Xóa thành công");
+    //         window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSDonhang";
+    //             </script>';
+    // exit();
+    //     }
+    //     else{
+    //         echo'<script>alert("Xóa thất bại")</script>';
+    //     }
        
     
 
-    }
+    // }
     function sua($madonhang){
         
-        $getMasp=$this->qlhh->getMasp();
-        $getMadonhang=$this->qlhh->getMadonhang();
-        $getMaKH=$this->qlhh->getMaKH();
-        $getGiatri=$this->qlhh->getGiatri();
+        // $getMasp=$this->qlhh->getMasp();
+        // $getMadonhang=$this->qlhh->getMadonhang();
+        // $getMaKH=$this->qlhh->getMaKH();
+        // $getGiatri=$this->qlhh->getGiatri();
        
        
         $this->view('Masterlayout',[
-            'page'=>'DSDonhang_sua',
+            'page'=>'Donhang_sua',
             'dulieu'=>$this->qlhh->donhang_find($madonhang,""),
-            'getMasp'=>$getMasp,'getMadonhang'=>$getMadonhang,'getMaKH'=>$getMaKH,'getGiatri'=>$getGiatri
+        
         ]);
     }
     function suadl(){
         if(isset($_POST['btnLuu'])){
-            $makhachhang=$_POST['txtMaKH'];
-            $masanpham=$_POST['txtMasp'];
+           
             $madonhang=$_POST['txtMadonhang'];
-            $soluong=$_POST['txtSoluong'];
-            $tongtien=$_POST['txtTongtien'];
-            $voucher=$_POST['txtMaVoucher'];
-            $ngaydathang=$_POST['txtNgaydathang'];
-            $diachi=$_POST['txtDiachi'];
+           
+            $trangthai=$_POST['txtTrangthai'];
+            
                                                // gọi hàm chèn dl tacgia_ins trong model tacgia_m
-            $kq=$this->qlhh->donhang_upd($makhachhang,$masanpham, $madonhang,$soluong, $tongtien,$voucher, $ngaydathang,$diachi);
+            $kq=$this->qlhh->donhang_upd($madonhang,$trangthai);
             if($kq){
                 echo'<script>alert("Sửa thành công")
                 window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSDonhang";

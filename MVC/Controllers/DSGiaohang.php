@@ -129,8 +129,15 @@
                     // gọi hàm chèn dl tacgia_ins trong model tacgia_m
             $kq=$this->dsgh->giaohang_upd($mdh,$ndh,$nnh,$dvvc,$tt);
             if($kq){
+                
+                    $uptt=$this->dsgh->update_trangthai($mdh,$tt);
+                    if($uptt){
+                        echo '<script>
+                        alert("Cập nhật trạng thái thành công");
+                        </script>';
+                    
                 echo'<script>alert("Sửa thành công")</script>';
-            }
+            }}
             else{
                 echo'<script>alert("Sửa thất bại")</script>';
             }

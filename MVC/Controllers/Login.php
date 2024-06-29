@@ -40,7 +40,7 @@ class Login extends controller{
                         // Gọi đến trang bán hàng
                         echo '<script>
                         alert("Đăng nhập thành công");
-                        window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Showproduct.php";
+                        window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Showproduct_c";
                         </script>';
                         
                         

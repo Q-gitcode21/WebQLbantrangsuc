@@ -88,10 +88,10 @@
                                            
                                            
                                             <td class="btn_cn">
-                                            <form action="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSGiaohang/sua/<?php echo $row['Madonhang']?>" method="post">
-                                                <button class="button-85"  role="button">Sửa</button> &nbsp;
+                                            <form action="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSGiaohang/sua/<?php echo $row['Madonhang']; ?>" method="post">
+                                                <button class="button-85"  role="button">Sửa</button>
                                             </form>
-                                               <form action="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSGiaohang/xoa/<?php echo $row['Madonhang']?>" method="post">
+                                               <form action="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSGiaohang/xoa/<?php echo  $row['Madonhang']; ?>" method="post">
                                                 <button class="button-85" onclick="return confirm('Bạn có chắc muốn xóa')" role="button" >Xóa</button>
                                                </form>
                                             </td>

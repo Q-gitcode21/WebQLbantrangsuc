@@ -10,8 +10,9 @@
 <body>
 <?php 
  $sql="SELECT Ngaydathang,
- SUM(Tongtien) AS TongTienTrongNgay
-  FROM qldonhang
+ SUM(amount_paid) AS TongTienTrongNgay
+  FROM orders
+  WHERE Trangthaidonhang = 'Thành công'
   GROUP BY Ngaydathang;";
   $con=mysqli_connect('localhost','root','','qlbanhang') ;
   $res= mysqli_query($con,$sql);
@@ -28,7 +29,9 @@ if (isset($res) && mysqli_num_rows($res) > 0) {
         $xaxis[] = $row['Ngaydathang'];
     }
     ?>
+    <div class="bgDoanhthu" style="width:900px; background: white; " >
     <div><h3>Thống kê doanh thu</h3></div>
+
     <div class="Doanhthu">
         <div style="width: 600px;" id="chart"></div>
         <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
@@ -57,7 +60,7 @@ if (isset($res) && mysqli_num_rows($res) > 0) {
     <?php
 }
 ?>
-
+</div>
     </div>
     </div>
 </body>

@@ -2,7 +2,7 @@
 
 class Home extends controller{
     function Get_data(){
-        $this->view('Showproduct',[]);
+        $this->view('Login_v',[]);
 
     }
 }

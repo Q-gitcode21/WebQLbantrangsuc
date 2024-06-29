@@ -23,6 +23,7 @@
             $nnh=$_POST['txtNgaynhanhang'];
             $dvvc=$_POST['selectDonvivanchuyen'];            
             $tt=$_POST['selectTrangthai'];
+            $mdh=trim($mdh);
              // Convert dates to timestamps for comparison
             $ndhTimestamp = strtotime($ndh);
             $nnhTimestamp = strtotime($nnh);
@@ -30,7 +31,7 @@
         if ($ndhTimestamp > $nnhTimestamp) {
             echo '<script>
             alert("Ngày nhận hàng không thể trước ngày đặt hàng");
-            window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSDonhang";
+             window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSDonhang";
             </script>';
             exit(); // Stop further execution
         }
@@ -50,11 +51,19 @@
                      // gọi hàm chèn dl giaohang_ins trong model tacgia_m
             $kq=$this->giaohang->giaohang_ins($mdh,$ndh,$nnh,$dvvc,$tt);
             if($kq){
+                $uptt=$this->giaohang->update_trangthai($mdh,$tt);
+                if($uptt){
+                    echo '<script>
+                    alert("Cập nhật trạng thái thành công");
+                    </script>';
+                }
                 echo '<script>
                 alert("Thêm mới thành công");
                 window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSGiaohang";
                 </script>';
-                // hiện thị alert trc khi chuyển trang
+                //hiện thị alert trc khi chuyển trang
+
+                
             exit();
                 
             }

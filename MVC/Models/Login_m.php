@@ -7,8 +7,8 @@ class Login_m extends connectDB{
     }
     function doanhthungay(){
         $sql="SELECT Ngaydathang,
-       SUM(Tongtien) AS TongTienTrongNgay
-        FROM qldonhang
+       SUM(amount_paid) AS TongTienTrongNgay
+        FROM orders
         GROUP BY Ngaydathang;";
        
         

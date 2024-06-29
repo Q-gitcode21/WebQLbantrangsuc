@@ -44,6 +44,13 @@ class Giaohang_m extends connectDB{
         WHERE Madonhang='$mdh'";
         return mysqli_query($this->con,$sql);
     }
+    function update_trangthai($mdh,$trangthai){
+       
+            $sql="UPDATE orders SET Trangthaidonhang='$trangthai'
+            WHERE Madonhang='$mdh'";
+            return mysqli_query($this->con,$sql);
+        
+    }
     
     
 }
