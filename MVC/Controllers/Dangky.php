@@ -21,7 +21,7 @@ class Dangky extends controller{
             $check=$this->dangky->checktrungemail($email);
             if($check){
                 echo'<script>alert("Email đã đăng ký");
-                window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Dangky";
+                window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Login";
                 </script>';
             }
             else{

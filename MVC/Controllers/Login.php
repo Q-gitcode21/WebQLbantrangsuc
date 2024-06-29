@@ -5,6 +5,7 @@ class Login extends controller{
     {
         $this->Login=$this->model('Login_m');
         
+        
         // khởi tạo đối tượng model('Login_m') gán cho $Login
     }
     function Get_data(){
@@ -32,21 +33,24 @@ class Login extends controller{
                }
                if ($mk==$mk_input)
                {
-               
+                    // tạo phiên đăng nhập
                     $_SESSION['Id']=$id;
+                    $_SESSION['Email']=$email;
                     if ($quyen == 'Khách hàng') {
                         // Gọi đến trang bán hàng
                         echo '<script>
                         alert("Đăng nhập thành công");
-                        window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD";
-                        </script>'; 
+                        window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Showproduct.php";
+                        </script>';
+                        
+                        
                         $result_mess=true;                 
                         exit();
                     } 
                     elseif ($quyen == 'Nhân viên') {
                         // Gọi đến trang quản lý
                         $doanhthu=$this->Login->doanhthungay();
-                        $this->view('Masterlayout',['page'=>'Trangchu_v', 'dulieu'=>$doanhthu]);
+                        $this->view('Masterlayout',['page'=>'Trangchu_v', 'dulieu'=>$doanhthu,'id'=>$id]);
                         $result_mess=true;
                         exit();
                     }

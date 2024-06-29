@@ -26,7 +26,7 @@
            
             
                     // gọi hàm chèn dl khachhang_ins trong model tacgia_m
-            $kq=$this->khachhang->khachhang_upd($id,$tenkhachhang,$gioitinh,$diachi,$sdt,$ngaysinh);
+            $kq=$this->khachhang->khachhang_ins($id,$tenkhachhang,$gioitinh,$diachi,$sdt,$ngaysinh);
             
             if($kq){
                 echo '<script>

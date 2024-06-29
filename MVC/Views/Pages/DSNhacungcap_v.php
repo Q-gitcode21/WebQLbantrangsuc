@@ -94,7 +94,7 @@
                                            
                                             <td class="btn_cn">
                                             <form action="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSNhacungcap/sua/<?php echo $row['Mancc']?>" method="post">
-                                            <button class="button-85" role="button">Sửa</button> 
+                                            <button class="button-85" role="button">Sửa</button> &nbsp;&nbsp;
                                             </form>
 
                                                <form action="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSNhacungcap/xoa/<?php echo $row['Mancc']?>" method="post">

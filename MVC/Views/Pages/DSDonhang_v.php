@@ -176,12 +176,13 @@
                 </div>            
                 <div class="input-box">
                     
-                    <input style="padding: 0px 5px 0px 200px;" type="date" required name="txtNgaynhanhang" value="<?php if(isset($data['Ngaynhanhangdukien'])) echo $data['Ngaynhanhangdukien']?>">
+                    <input style="padding: 0px 5px 0px 200px;" type="date" required name="txtNgaynhanhang" id="ngaynhanhangInput" value="<?php if(isset($data['Ngaynhanhangdukien'])) echo $data['Ngaynhanhangdukien']?>">
                     <label>Ngày nhận hàng dự kiến</label>
                 </div>
                 <div class="input-box">
-                  <select name="selectDonvivanchuyen">
-                  <option selected value="0">Chọn đơn vị vận chuyển</option>
+                <label style="padding-left: 300px;" for="selectDonvivanchuyen">Chọn đơn vị vận chuyển</label>
+                  <select name="selectDonvivanchuyen" required>
+                  
                   <option value="J&T">J&T</option>
                   <option value="Giao hàng nhanh">Giao hàng nhanh</option>
                   <option value="Giao hàng tiết kiệm">Giao hàng tiết kiệm</option>
@@ -189,6 +190,7 @@
 
                 </div>
                 <div class="input-box">
+                <label style="padding-left: 300px;" for="selectTrangthai">Trạng thái</label>
                   <select aria-readonly="true" name="selectTrangthai">
                   <!-- <option selected value="0">Chọn trạng thái</option> -->
                   <option value="Đang vận chuyển">Đang vận chuyển</option>
@@ -222,6 +224,7 @@
     
     <!-- <script src="./Public/JS/datatable.js"></script> -->
     <script>
+    
     // Gắn bộ lắng nghe sự kiện cho các hàng trong bảng
     const tableRows = document.querySelectorAll('#customers_table tr');
     tableRows.forEach((row) => {
@@ -240,6 +243,7 @@
         document.getElementById('ngaydathangInput').value = ngaydathang;
     }
 </script>
+
 </body>
 
 </html>

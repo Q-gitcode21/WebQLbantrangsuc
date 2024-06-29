@@ -87,16 +87,22 @@
                                             <td> <?php echo $row['Matkhau']?> </td>
                                            
                                            
-                                           
-                                            <td class="btn_cn">
-                                            <form action="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSTaikhoan/sua/<?php echo $row['Id']?>" method="post">
-                                                <button class="button-85"  role="button">Sửa</button> &nbsp;
-                                            </form>
-                                               <form action="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSTaikhoan/xoa/<?php echo $row['Id']?>" method="post">
-                                                <button class="button-85 " onclick="return confirm('Bạn có chắc muốn xóa')" role="button" >Xóa</button>
-                                               </form>
-                                            </td>
-                                        </tr>
+                                            <?php
+if ($row['Quyen'] == 'Nhân viên') {
+    // Hiển thị nút Sửa
+    echo '<td class="btn_cn">';
+    echo '<form action="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSTaikhoan/sua/' . $row['Id'] . '" method="post">';
+    echo '<button class="button-85" role="button">Sửa</button>  ';
+    echo '</form>';
+
+    // Hiển thị nút Xóa
+    echo '<form action="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSTaikhoan/xoa/' . $row['Id'] . '" method="post">';
+    echo '<button class="button-85" onclick="return confirm(\'Bạn có chắc muốn xóa\')" role="button">Xóa</button>';
+    echo '</form>';
+    echo '</td>';
+}
+?>
+
 
                                 <?php
 

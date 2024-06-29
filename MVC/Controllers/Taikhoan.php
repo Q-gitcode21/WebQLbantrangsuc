@@ -61,11 +61,11 @@
                 $email=$sheetData[$i]["B"];
                 $quyen=$sheetData[$i]["C"];
                 $mk=$sheetData[$i]["D"];
-                $nt=$sheetData[$i]["E"];
-                $this->taikhoan->taikhoan_ins($id,$email,$quyen,$mk,$nt);
+               
+                $this->taikhoan->taikhoan_ins($id,$email,$quyen,$mk);
             }
             echo '<script>
-                alert("Thêm mới thành công");
+                alert("Upload thành công");
                 window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSTaikhoan";
                 </script>';
         }

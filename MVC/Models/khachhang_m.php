@@ -38,7 +38,11 @@ class khachhang_m extends connectDB{
     
         return mysqli_query($this->con,$sql);
     }
-  
+    function khachhang_ins($id,$tenkhachhang,$gioitinh,$diachi,$sdt,$ngaysinh){
+        $sql="INSERT INTO qlkh VALUES ('$id','$tenkhachhang','$gioitinh','$diachi','$sdt','$ngaysinh')";
+         return mysqli_query($this->con,$sql);
+        
+    }
     
     
     

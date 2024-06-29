@@ -18,15 +18,25 @@
    
     function themmoi(){
         if(isset($_POST['btnLuu'])){
-            $mdh=$_POST['selectMadonhang'];
-             
+            $mdh=$_POST['selectMadonhang']; 
             $ndh=$_POST['txtNgaydathang'];
             $nnh=$_POST['txtNgaynhanhang'];
             $dvvc=$_POST['selectDonvivanchuyen'];            
             $tt=$_POST['selectTrangthai'];
-            
+             // Convert dates to timestamps for comparison
+            $ndhTimestamp = strtotime($ndh);
+            $nnhTimestamp = strtotime($nnh);
+    
+        if ($ndhTimestamp > $nnhTimestamp) {
+            echo '<script>
+            alert("Ngày nhận hàng không thể trước ngày đặt hàng");
+            window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSDonhang";
+            </script>';
+            exit(); // Stop further execution
+        }
            
-                        
+            else{
+                                  
                     // Kiem tra trung id
             $kq1=$this->giaohang->checktrungma($mdh);
             
@@ -51,6 +61,9 @@
             else
                 echo'<script>alert("Thêm mới thất bại")</script>';
             }
+            }
+           
+          
             
             
             

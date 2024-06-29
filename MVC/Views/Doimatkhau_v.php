@@ -1,3 +1,12 @@
+<?php
+if(session_id()=='') session_start();
+if(isset($_SESSION['Id'])== false){
+    echo'<script>alert("Chưa đăng ký tài khoản");
+    window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Dangky";
+    </script>';    
+}
+$email=$_SESSION['Email'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,39 +33,44 @@
     
     <div class="formDangnhap">
         <!-- <span class="close">&times;</span> -->
-        <form method="post" action="./doimatkhau">
+        <form method="post" action="./Doimatkhau/doimatkhau">
         <div style="background-color:white;" class="content" >
         
         <div class="form-box login">
             <h2>Đổi mật khẩu</h2>
             
-              <?php 
-             $id =$_GET['id']; echo $id;
-              ?>
-                <input type="hidden" name="txtId" value="<?php if(isset($data['id'])) echo $data['id']?>">    
+              
+                 
                 <div class="input-box">
                     <span class="icon">
-                        <img src="./Public/Picture/Pic_login/email.png" alt="" width="15px">
+                        <img src="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Public/Picture/Pic_login/email.png" alt="" width="15px">
                     </span>
-                    <input type="email" name="txtEmaildky" value="<?php if(isset($data['email'])) echo $data['email']?>">
+                    <input style="padding-left: 50px;" type="email" name="txtEmaildky" value="<?php echo $email ?>" readonly>
                     <label>Email</label>
                 </div>
                 <div class="input-box">
                     <span class="icon">
-                    <img src="./Public/Picture/Pic_login/khoa.png" alt="" width="15px">
+                    <img src="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Public/Picture/Pic_login/khoa.png" alt="" width="15px">
+                    </span>
+                    <input type="password" required name="txtMatkhaucu">
+                    <label>Password</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                    <img src="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Public/Picture/Pic_login/khoa.png" alt="" width="15px">
                     </span>
                     <input type="password" required name="txtMatkhaulan1">
                     <label>Password</label>
                 </div>
                 <div class="input-box">
                     <span class="icon">
-                    <img src="./Public/Picture/Pic_login/khoa.png" alt="" width="15px">
+                    <img src="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Public/Picture/Pic_login/khoa.png" alt="" width="15px">
                     </span>
                     <input type="password" required name="txtMatkhaulan2">
                     <label>Nhập lại password</label>
                 </div>
                 
-                <button type="submit" class="btn" name="btnLuu">Lưu</button>
+                <button type="submit" class="btn" name="btnluu">Lưu</button>
                 
             
         </div>
