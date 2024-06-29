@@ -22,9 +22,7 @@
                     <span class="icon">
                     <img src="./Public/Picture/id-card_9424609.png" alt="" width="15px">
                     </span>
-                    <!-- <input type="text" required name="txtMakhachhang"  value="">
-
-                    -->
+                    
                     <select name="txtMaKH" class="dd4">
                       
                     <option value="<?php if(isset($row['MaKH'])) echo $row['MaKH']?>"> <?php if(isset($row['MaKH'])) echo $row['MaKH']; ?></option>

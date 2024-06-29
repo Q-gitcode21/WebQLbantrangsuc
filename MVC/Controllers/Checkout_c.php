@@ -8,7 +8,6 @@ class Checkout_c extends controller{
     function Get_data(){
         
         $id=$_SESSION['Id'];
-        // echo $id;
         $this->view('checkout',['dulieu'=>$this->kh->khachhang_find($id,'')]);
         
         // gọi giao diện chính và truyền dữ liệu page là trang dangky view
