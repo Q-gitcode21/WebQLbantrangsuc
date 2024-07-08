@@ -62,6 +62,7 @@
         $sheet->getStyle('A1:F1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
         //Điền dữ liệu vào các dòng. Dữ liệu lấy từ DB
         $manh=$_POST['txtTimkiemManhaphang'];
+            echo $manh;
             
         $data=$this->dsnh->nhaphang_find($manh);  // goi ham tim kiem
         while($row=mysqli_fetch_array($data)){
@@ -130,24 +131,30 @@
             $manh=$_POST['txtManhaphang'];
             $tgnhap=$_POST['txtThoigiannhap'];
             $masp=$_POST['ddlSanpham'];
-           
+            $gianhap=$_POST['txtGianhap'];
             $soluong=$_POST['txtSoluong'];
-            $donvi=$_POST['txtDonvitinh'];
+            $donvi=$_POST['ddlDonvitinh'];
+            $tongtien=$gianhap*$soluong;
+            
+           
             $mancc=$_POST['ddlNhacungcap'];
             
            
             
             
                     // gọi hàm chèn dl tacgia_ins trong model tacgia_m
-            $kq=$this->dsnh->nhaphang_upd($manh,$tgnhap,$masp,$soluong,$donvi,$mancc);
+            $kq=$this->dsnh->nhaphang_upd($manh,$tgnhap,$masp,$gianhap,$soluong,$donvi,$tongtien,$mancc);
+            var_dump($kq);
             if($kq){
                 echo'<script>alert("Sửa thành công")</script>';
+               
+
             }
             else{
                 echo'<script>alert("Sửa thất bại")</script>';
             }
             
-            // gọi lại giao diện
+            //gọi lại giao diện
              $this->view('Masterlayout',[
                  'page'=>'DSnhaphang_v',
                 'dulieu'=>$this->dsnh->nhaphang_find('','')

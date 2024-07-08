@@ -53,6 +53,14 @@
                     ?>
                     </select>
 
+
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <img src="./Public/Picture/Pic_login/user.png" alt="" width="15px">
+                    </span>
+                    <input type="text" required name="txtGianhap" value="<?php  echo $row['Gianhap']?>">
+                    <label>Gía nhập</label>   
                 </div>
                 <div class="input-box">
                     <span class="icon">
@@ -62,12 +70,12 @@
                     <label>Số lượng</label>   
                 </div>
                 <div class="input-box">
-                    <span class="icon">
-                        <img src="./Public/Picture/Pic_login/user.png" alt="" width="15px">
-                    </span>
-                    <input type="text" required name="txtDonvitinh" value="<?php  echo $row['Donvitinh']?>">
-                    <label>Đơn vị tính</label>   
-                </div>
+                <label>Đơn vị tính</label> 
+                        <select name="ddlDonvitinh">
+                        <option value="bộ" <?php if(isset($row['Donvitinh']) && $row['Donvitinh'] === 'bộ') echo 'selected'; ?>>bộ</option>
+                        <option value="chiếc" <?php if(isset($row['Donvitinh']) && $row['Donvitinh'] === 'chiếc') echo 'selected'; ?>>chiếc</option>
+                        </select>
+                    </div>
                 <div class="input-box">
                     <span class="icon">
                         <img src="./Public/Picture/Pic_login/user.png" alt="" width="15px">
@@ -83,7 +91,7 @@
                              echo '<option value="' . $r2['Mancc'] . '" ' . $selected . '>' . $r2['Tenncc'] . '</option>';
                          }
                      } else {
-                         echo '<option value="">Không có mã sản phẩm</option>';
+                         echo '<option value="">Không có nha cung cap</option>';
                      }
                     ?>
                     </select>

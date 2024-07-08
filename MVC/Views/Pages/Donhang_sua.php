@@ -49,7 +49,7 @@
                     </span>
                     <!-- <input type="text" required name="txtGioitinh"  value=""> -->
                     <div class="input-box">
-                        <select style="width:100%" name="txtTrangthai">
+                        <select style="width:100%" name="txtTrangthai" disabled>
                         <option value="Chờ xác nhận" <?php if(isset($row['Trangthai']) && $row['Trangthai'] === 'Chờ xác nhận') echo 'selected'; ?>>Chờ xác nhận</option>
                         <option value="Đang vận chuyển" <?php if(isset($row['Trangthai']) && $row['Trangthai'] === 'Đang vận chuyển') echo 'selected'; ?>>Đang vận chuyển</option>
                         <option value="Thành công" <?php if(isset($row['Trangthai']) && $row['Trangthai'] === 'Thành công') echo 'selected'; ?>>Thành công</option>

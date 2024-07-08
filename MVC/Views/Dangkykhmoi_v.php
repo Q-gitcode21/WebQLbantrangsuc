@@ -15,8 +15,9 @@
     <link rel="stylesheet" href="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Public/CSS/dulieu.css">
 </head>
 <body>
+    <div class="all" >
     <form id="myForm" method="post" action="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/khachhang/themmoi">
-    <div class="content">
+    <div style="margin-left:600px;" class="content">
     <div class="form-box login">
             <h2>Đăng ký thông tin</h2>
             <?php
@@ -73,6 +74,7 @@
         </div>
         </div>
     </form>
+    </div>
     
 </body>
 </html>

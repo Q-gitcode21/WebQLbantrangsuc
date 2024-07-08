@@ -62,9 +62,11 @@
                     <tr>
                         <th> Mã nhập hàng<span class="icon-arrow">&UpArrow;</span></th>
                         <th> Thời gian nhập <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Tên sản phẩm <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Mã sản phẩm <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Gía nhập <span class="icon-arrow">&UpArrow;</span></th>
                         <th> Số lượng<span class="icon-arrow">&UpArrow;</span></th>
                         <th> Đơn vị tính<span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Tổng tiền<span class="icon-arrow">&UpArrow;</span></th>
                         <th> Nhà cung cấp <span class="icon-arrow">&UpArrow;</span></th>
 
                         <th style="padding-left:50px"> Chức năng <span class="icon-arrow">&UpArrow;</span></th>
@@ -84,8 +86,11 @@
                                             </td>
                                             <td> <?php echo $row['Thoigiannhap']?> </td>
                                             <td> <?php echo $row['Masp']?> </td>
+                                            <td> <?php echo $row['Gianhap']?> </td>
                                             <td> <?php echo $row['Soluong']?> </td>
                                             <td> <?php echo $row['Donvitinh']?> </td>
+                                            <td> <?php echo $row['TongTien']?> </td>
+                                           
                                             <td> <?php echo $row['Mancc']?> </td>
                                             <td class="btn_cn">
                                             <form action="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSNhaphang/sua/<?php echo $row['Manhaphang']?>" method="post">

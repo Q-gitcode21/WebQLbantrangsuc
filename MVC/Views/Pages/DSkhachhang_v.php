@@ -35,19 +35,19 @@
             <button style="border: none; background: transparent;" type="submit" name="btnTimkiem"><i class="fa fa-search" ></i></button>
             </form>
 
-            <div class="Insert">
+            <!-- <div class="Insert">
                 <form action="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/khachhang" method="post">
                 <button class="button-85" role="button">Thêm khách hàng</button>
                 </form>
             
-            </div>
+            </div> -->
             
-            <div class="Upload">
+            <!-- <div class="Upload">
                 <form action="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/khachhang/upload" method="post" enctype="multipart/form-data">
                 <input type="file" name="txtFile">
                 <button class="button-85" role="button">Upload</button>
                 </form>
-            </div>
+            </div> -->
 
             <div class="export__file">
                 <label for="export-file" class="export__file-btn" title="Export File"></label>
@@ -69,7 +69,7 @@
                         <th> Địa chỉ <span class="icon-arrow">&UpArrow;</span></th>
                         <th> SĐT <span class="icon-arrow">&UpArrow;</span></th>
                         <th> Ngày sinh <span class="icon-arrow">&UpArrow;</span></th>
-                        <th style="padding-left:50px"> Chức năng <span class="icon-arrow">&UpArrow;</span></th>
+                        <!-- <th style="padding-left:50px"> Chức năng <span class="icon-arrow">&UpArrow;</span></th> -->
                     </tr>
                 </thead>
                 <tbody>
@@ -90,14 +90,14 @@
                                             <td> <?php echo $row['SDT']?> </td>
                                             <td> <?php echo $row['Ngaysinh']?> </td>
                                            
-                                            <td class="btn_cn">
+                                            <!-- <td class="btn_cn">
                                             <form action="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSkhachhang/sua/<?php echo $row['Id']?>" method="post">
                                                 <button class="button-85"  role="button">Sửa</button> &nbsp;
                                             </form>
                                                <form action="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSkhachhang/xoa/<?php echo $row['Id']?>" method="post">
                                                 <button class="button-85" onclick="return confirm('Bạn có chắc muốn xóa')" role="button" >Xóa</button>
                                                </form>
-                                            </td>
+                                            </td> -->
                                         </tr>
 
                                 <?php

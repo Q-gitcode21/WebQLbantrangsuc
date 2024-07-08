@@ -66,7 +66,7 @@
                         <div class="col-lg-5">
                             <div class="home_contact">
                                 <div class="contact_icone">
-                                    <img src="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/images/icon/icon_phone.png" alt="">
+                                    <img src="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Public/Picture/images/icon/icon_phone.png" alt="">
                                 </div>
                                 <div class="contact_box">
                                     <p> Hỗ trợ : <a href="">1234567894</a></p>
@@ -76,7 +76,7 @@
 
                         <div class="col-lg-2 col-md-3 col-4">
                             <div class="logo" style="width: 300px;" >
-                                <a href="index.php"><img src="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/images/logo/logo.png" alt=""></a>
+                                <a href="index.php"><img src="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Public/Picture/images/logo/logo.png" alt=""></a>
                             </div>
                         </div>
 
@@ -174,7 +174,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="single_banner">
                             <div class="banner_thumb">
-                                <a href="#"><img src="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/images/banner/bg-1.jpg" alt="banner1"></a>
+                                <a href="#"><img src="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Public/Picture/images/banner/bg-1.jpg" alt="banner1"></a>
                                 <div class="banner_content">
                                     <p>Thiết kế mới</p>
                                     <h2>Nhẫn tạo tác nhỏ</h2>
@@ -186,7 +186,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="single_banner">
                             <div class="banner_thumb">
-                                <a href="#"><img src="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/images/banner/bg-2.jpg" alt="banner2"></a>
+                                <a href="#"><img src="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Public/Picture/images/banner/bg-2.jpg" alt="banner2"></a>
                                 <div class="banner_content">
                                     <p>Bán chạy nhất</p>
                                     <h2>Nhẫn kim cương</h2>
@@ -198,7 +198,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="single_banner">
                             <div class="banner_thumb">
-                                <a href="#"><img src="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/images/banner/bg-3.jpg" alt="banner3"></a>
+                                <a href="#"><img src="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Public/Picture/images/banner/bg-3.jpg" alt="banner3"></a>
                                 <div class="banner_content">
                                     <p>Sản phẩm nổi bật</p>
                                     <h2>Nhẫn Platinium</h2>

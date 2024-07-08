@@ -18,7 +18,7 @@
             $tenkhachhang=$_POST['txtTKTKH']; 
             $makhachhang=$_POST['txtTKMKH']; // lay du lieu nhap tu txt  
             
-            $dl=$this->dskh->khachhang_find($tenkhachhang,$makhachhang); // goi ham tim kiem
+            $dl=$this->dskh->khachhang_find($makhachhang,$tenkhachhang); // goi ham tim kiem
             // goi lai giao dien render lại trang va truyen $ dl ra 
             $this->view('Masterlayout',[
                 'page'=>'DSkhachhang_v',

@@ -22,7 +22,7 @@
     <div class="row mt-2 pb-3">
       <?php
   			include 'config.php';
-  			$stmt = $conn->prepare('SELECT * FROM qlysanpham');
+  			$stmt = $conn->prepare('SELECT * FROM qlysanpham WHERE Soluong > 0' );
   			$stmt->execute();
   			$result = $stmt->get_result();
   			while ($row = $result->fetch_assoc()):
@@ -43,7 +43,7 @@
                                                                         ?>
             <div class="card-body p-1">
               <h4 class="card-title text-center text-info"><?= $row['Tensp'] ?></h4>
-              <h5 class="card-text text-center text-danger"><i class="fas fa-rupee-sign"></i>&nbsp;&nbsp;<?= number_format($row['Gia'],2) ?>/-</h5>
+              <h5 class="card-text text-center text-danger"><i>VNĐ</i>&nbsp;&nbsp;<?= number_format($row['Gia']) ?></h5>
 
             </div>
             <div class="card-footer p-1">
@@ -53,8 +53,8 @@
                     <b>Quantity : </b>
                   </div>
                   <div class="col-md-6">
-                    <input type="number" class="form-control pqty" min ="1" max="<?= $row['Soluong'] ?>" value="">
-                  </div>
+                  <input type="number"  class="form-control pqty" min="1" max="<?= $row['Soluong'] ?>" value="1" >
+                </div>
                 </div>
                
                 <input type="hidden" class="pname" value="<?= $row['Tensp'] ?>">
@@ -78,7 +78,7 @@
 
   <script type="text/javascript">
   $(document).ready(function() {
-
+    
     // Send product details in the server
     $(".addItemBtn").click(function(e) {
       e.preventDefault();
@@ -127,6 +127,7 @@
     }
   });
   </script>
+
 </body>
 
 </html>

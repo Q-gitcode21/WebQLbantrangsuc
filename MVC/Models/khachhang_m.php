@@ -22,7 +22,7 @@ class khachhang_m extends connectDB{
         }
         // trường hợp tìm kiếm
          else {
-            $sql = "SELECT * FROM qlkh WHERE Id LIKE '%$id%' OR Ten LIKE '%$tenkhachhang%'";
+            $sql = "SELECT * FROM qlkh WHERE Id LIKE '%$id%' AND Ten LIKE '%$tenkhachhang%'";
         }
        
         return mysqli_query($this->con,$sql);

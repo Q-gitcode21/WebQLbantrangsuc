@@ -1,8 +1,8 @@
 <!-- truy van sql -->
 <?php 
 class Nhaphang_m extends connectDB{
-    function nhaphang_ins($manh,$tgnhap,$masp,$soluong,$donvi,$mancc){
-        $sql="INSERT INTO qlynhaphang VALUES ('$manh','$tgnhap','$masp','$soluong','$donvi','$mancc')";
+    function nhaphang_ins($manh,$tgnhap,$masp,$gianhap,$soluong,$donvi,$tongtien,$mancc){
+        $sql="INSERT INTO qlynhaphang VALUES ('$manh','$tgnhap','$masp','$gianhap','$soluong','$donvi','$tongtien','$mancc')";
          return mysqli_query($this->con,$sql);
         
     }
@@ -14,6 +14,11 @@ class Nhaphang_m extends connectDB{
             $kq=true;
         }
         return $kq;
+    }
+    function update_sl($masp,$soluong){
+        $sqlUpdate = "UPDATE qlysanpham SET Soluong = Soluong + $soluong WHERE Masp = '$masp'";
+        
+        return mysqli_query($this->con,$sqlUpdate);
     }
     function nhaphang_find($manh){
         
@@ -37,9 +42,10 @@ class Nhaphang_m extends connectDB{
         $sql="DELETE FROM qlynhaphang WHERE Manhaphang='$manh'";
         return mysqli_query($this->con,$sql);
     }
-    function nhaphang_upd($manh,$tgnhap,$masp,$soluong,$donvi,$mancc){
-        $sql="UPDATE qlynhaphang SET Thoigiannhap='$tgnhap',Masp='$masp',Soluong='$soluong',Donvitinh='$donvi',Mancc='$mancc'
+    function nhaphang_upd($manh,$tgnhap,$masp,$gianhap,$soluong,$donvi,$tongtien,$mancc){
+        $sql="UPDATE qlynhaphang SET Thoigiannhap='$tgnhap',Masp='$masp',Gianhap='$gianhap',Soluong='$soluong',Donvitinh='$donvi',TongTien='$tongtien',Mancc='$mancc'
         WHERE Manhaphang='$manh'";
+        
         return mysqli_query($this->con,$sql);
     }
     

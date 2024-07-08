@@ -16,42 +16,55 @@
 
         // gọi giao diện chính và truyền dữ liệu page là trang Nhaphang view
     }
+   
     function themmoi(){
         if(isset($_POST['btnLuu'])){
-            $manh=$_POST['txtManhaphang'];
+            $manh=null;
             $tgnhap=$_POST['txtThoigiannhap'];
             $masp=$_POST['ddlSanpham'];
+            $gianhap=$_POST['txtGianhap'];
             $soluong=$_POST['txtSoluong'];
-            $donvi=$_POST['txtDonvitinh'];
+            $donvi=$_POST['ddlDonvitinh'];
+            $tongtien=$gianhap*$soluong;
+            
+           
             $mancc=$_POST['ddlNhacungcap'];
 
 
             
-            // Kiem tra trung madm
-            $kq1=$this->Nhaphang->checktrungmanh($manh);
+            // Kiem tra trung mad
             
-            if($kq1){
-                echo'<script>alert("Trùng manh")</script>';
-            }
-            else{
-                    // gọi hàm chèn dl Nhaphang_ins trong model tacgia_m
-            $kq=$this->Nhaphang->Nhaphang_ins($manh,$tgnhap,$masp,$soluong,$donvi,$mancc);
-            if($kq){
-                echo '<script>
-                alert("Thêm mới thành công");
-                window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Nhaphang";
-                </script>';
-                // hiện thị alert trc khi chuyển trang
-    exit();
-                
-            }
-            else
-                echo'<script>alert("Thêm mới thất bại")</script>';
-            }
-           
         
-        }
-    }
+           
+                    // gọi hàm chèn dl Nhaphang_ins trong model tacgia_m
+                        $kq=$this->Nhaphang->Nhaphang_ins($manh,$tgnhap,$masp,$gianhap,$soluong,$donvi,$tongtien,$mancc);
+                        if($kq){
+                            echo '<script>
+                            alert("Thêm mới thành công");
+                            window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Nhaphang";
+                            </script>';
+                        $kq2=$this->Nhaphang->update_sl($masp,$soluong);
+                        var_dump($kq2);
+                            if($kq2){
+                                echo'<script>alert("Update số lượng thành công")</script>';
+
+                               
+
+                               
+                            // hiện thị alert trc khi chuyển trang
+                
+                            }
+                            exit();
+                            
+                        }
+                        
+                    else
+                            echo'<script>alert("Thêm mới thất bại")</script>';
+                        }
+                    
+                    
+                    }
+                
     function upload(){
   
         $file=$_FILES['txtFile']['tmp_name'];
@@ -78,5 +91,5 @@
                 </script>';
         }
     
- }
+    }
  ?>

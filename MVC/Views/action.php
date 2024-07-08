@@ -27,12 +27,12 @@
 
 	    echo '<div class="alert alert-success alert-dismissible mt-2">
 						  <button type="button" class="close" data-dismiss="alert">&times;</button>
-						  <strong>Item added to your cart!</strong>
+						  <strong>Sản phẩm đã được thêm vào giỏ hàng!</strong>
 						</div>';
 	  } else {
 	    echo '<div class="alert alert-danger alert-dismissible mt-2">
 						  <button type="button" class="close" data-dismiss="alert">&times;</button>
-						  <strong>Item already added to your cart!</strong>
+						  <strong>Sản phẩm đã có trong giỏ hàng của bạn!</strong>
 						</div>';
 	  }
 	}
@@ -56,8 +56,11 @@
 	  $stmt->execute();
 
 	  $_SESSION['showAlert'] = 'block';
-	  $_SESSION['message'] = 'Item removed from the cart!';
-	  header('location:cart.php');
+	  $_SESSION['message'] = 'Sản phẩm đã được xóa khỏi giỏ hàng!';
+	  echo '<script>
+
+            window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Cart_c";
+                </script>';
 	}
 
 	// Remove all items at once from cart
@@ -65,21 +68,27 @@
 	  $stmt = $conn->prepare('DELETE FROM cart');
 	  $stmt->execute();
 	  $_SESSION['showAlert'] = 'block';
-	  $_SESSION['message'] = 'All Item removed from the cart!';
-	  header('location:cart.php');
+	  $_SESSION['message'] = 'Tất cả sản phẩm trong giỏ hàng đã được xóa!';
+	  echo '<script>
+           s
+            window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Cart_c";
+                </script>';
 	}
 
 	// Set total price of the product in the cart table
-	if (isset($_POST['Soluong'])) {
-	  $qty = $_POST['Soluong'];
+	if (isset($_POST['qty'])) {
+	  $qty = $_POST['qty'];
 	  $pid = $_POST['pid'];
 	  $pprice = $_POST['pprice'];
 
 	  $tprice = $qty * $pprice;
-
-	  $stmt = $conn->prepare('UPDATE cart SET Soluong=?, total_price=? WHERE id=?');
-	  $stmt->bind_param('isi',$qty,$tprice,$pid);
-	  $stmt->execute();
+	  
+	  $sql = "UPDATE cart  SET Soluong = '$qty' ,total_price='$pprice' Where id='$pid' ";
+	  echo $sql;
+	  mysqli_query($conn,$sql);
+	//   $stmt = $conn->prepare('UPDATE cart SET Soluong=?, total_price=? WHERE id=?');
+	//   $stmt->bind_param('isi',$qty,$tprice,$pid);
+	//   $stmt->execute();
 	}
 
 	// Checkout and save customer info in the orders table
@@ -92,15 +101,27 @@
 	  $address = $_POST['address'];
 	  $pmode = $_POST['pmode'];
 	  $date=$_POST['date'];
-
+	  $productArray = explode(', ', $products);
 	  $data = '';
 	  
 	  $sql = "INSERT INTO orders (Id,SDT,Diachi,Trangthaidonhang,products,amount_paid,Ngaydathang) VALUES ('$id', '$phone', '$address', '$pmode', '$products','$grand_total','$date')";
 	  mysqli_query($conn,$sql);
+	  // Duyệt qua từng sản phẩm
+	foreach ($productArray as $product) {
+    // Tách tên sản phẩm và số lượng
+    preg_match('/^(.*)\((\d+)\)$/', $product, $matches);
+    if (count($matches) == 3) {
+        $productName = $matches[1];
+        $quantity = (int)$matches[2];
+
+        // Trừ số lượng sản phẩm trong cơ sở dữ liệu
+        $stmt = $conn->prepare("UPDATE qlysanpham SET Soluong = Soluong - ? WHERE Tensp = ?");
+        $stmt->bind_param("is", $quantity, $productName);
+        $stmt->execute();
+    }
+}
 	  
-	//   $stmt = $conn->prepare('INSERT INTO orders (Id,SDT,Diachi,Trangthaidonhang,products,amount_paid)VALUES(?,?,?,?,?,?)');
-	//   $stmt->bind_param($id,$phone,$address,$pmode,$products,$grand_total);
-	//   $stmt->execute();
+	
 	  $stmt2 = $conn->prepare('DELETE FROM cart');
 	  $stmt2->execute();
 	  $data .= '<div class="text-center">
@@ -110,7 +131,7 @@
 								<h4>Ngày đặt hàng : ' . $date . '</h4>
 								<h4>Số điện thoại của bạn : ' . $phone . '</h4>
 								<h4>Địa chỉ của bạn: ' . $address . '</h4>
-								<h4>Tổng tiền: ' . number_format($grand_total,2) . '</h4>
+								<h4>Tổng tiền: ' . number_format($grand_total) . '</h4>
 								<h4>Trạng thái đơn hàng : ' . $pmode . '</h4>
 						  </div>';
 	  echo $data;

@@ -10,27 +10,20 @@
     justify-content: center;
     padding-top: 5px;
 }
-    
     </style>
     <link rel="stylesheet" href="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Public/CSS/dulieu.css">
 </head>
 <body>
     <form id="myForm" method="post" action="./Nhaphang/themmoi">
-    <div style="width:550px;" class="content">
+    <div class="content">
     <div class="form-box login">
             <h2>Thêm nhập hàng</h2>
 
             <form action="#">
-                <!-- <div class="input-box">
-                    <span class="icon">
-                    <img src="./Public/Picture/id-card_9424609.png" alt="" width="15px">
-                    </span>
-                    <input type="text" required name="txtManhaphang" value=
-                    <label>Mã nhập hàng</label>
-                </div>             -->
+               
                 <div class="input-box">
                     
-                    <input style="padding: 0px 5px 0px 200px;" type="date" required name="txtThoigiannhap" value="<?php if(isset($data['Thoigiannhap'])) echo $data['Thoigiannhap']?>">
+                    <input  style="padding: 0px 5px 0px 200px;" type="date" required name="txtThoigiannhap" value="<?php if(isset($data['Thoigiannhap'])) echo $data['Thoigiannhap']?>">
                     <label>Thời gian nhập</label>
                 </div>
                 <div class="input-box">
@@ -58,20 +51,27 @@
                     <span class="icon">
                         <img src="./Public/Picture/Pic_login/user.png" alt="" width="15px">
                     </span>
+                    <input type="text" required name="txtGianhap" value="<?php if(isset($data['Gianhap'])) echo $data['Gianhap']?>">
+                    <label>Giá nhập</label>   
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <img src="./Public/Picture/Pic_login/user.png" alt="" width="15px">
+                    </span>
                     <input type="text" required name="txtSoluong" value="<?php if(isset($data['Soluong'])) echo $data['Soluong']?>">
                     <label>Số lượng</label>   
                 </div>
+                <label>Đơn vị tính</label>
                 <div class="input-box">
-                    <span class="icon">
-                        <img src="./Public/Picture/Pic_login/user.png" alt="" width="15px">
-                    </span>
-                    <input type="text" required name="txtDonvitinh" value="<?php if(isset($data['Donvitinh'])) echo $data['Donvitinh']?>">
-                    <label>Đơn vị tính</label>   
+                 
+                        <select style="width:100%" name="ddlDonvitinh">
+                        <option value="bộ" <?php if(isset($row['Donvitinh']) && $row['Donvitinh'] === 'bộ') echo 'selected'; ?>>bộ</option>
+                        <option value="chiếc" <?php if(isset($row['Donvitinh']) && $row['Donvitinh'] === 'chiếc') echo 'selected'; ?>>chiếc</option>
+                        </select>
                 </div>
+              
                 <div class="input-box">
-                    <span class="icon">
-                        <img src="./Public/Picture/Pic_login/user.png" alt="" width="15px">
-                    </span>
+                    
                     <label></label>
                     <select name="ddlNhacungcap" id="">
                                     <option value=""> Chọn nhà cung cấp</option>
@@ -95,6 +95,7 @@
                 <div class="quaylai">
                 <a href="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSNhaphang">Quay lại</a>
                 </div>
+           
                 
                 
                 
