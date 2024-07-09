@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Public/CSS/dulieu.css">
 </head>
 <body>
-    <form id="myForm" method="post" action="./tintuc/themmoi">
+    <form id="myForm" method="post" action="./tintuc/themmoi" enctype="multipart/form-data">
     <div class="content">
     <div class="form-box login">
             <h2>Thêm tin tức</h2>
@@ -44,8 +44,16 @@
                 <div class="input-box">
                     <span class="icon">
                     </span>
-                    <input type="date" required name="txtngaytay" value="<?php if(isset($data['Ngaytao'])) echo $data['Ngaytao']?>">
+                    <input type="date" required name="txtngaytao" value="<?php if(isset($data['Ngaytao'])) echo $data['Ngaytao']?>">
                     <label>Ngày tạo</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon">
+                        <img src="./Public/Picture/Pic_login/user.png" alt="" width="15px">
+                    </span>
+                    <input type="file" required name="txtHinhanh" value="<?php if(isset($data['Hinhanh'])) echo $data['Hinhanh']?>">
+                    <label>Hình ảnh</label>   
                 </div>
                 
                 <button type="submit" class="btn" name="btnLuu">Lưu</button>

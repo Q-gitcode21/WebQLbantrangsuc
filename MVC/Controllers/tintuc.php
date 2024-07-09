@@ -17,6 +17,17 @@
             $noidung=$_POST['txtnoidung'];
             $tieude=$_POST['txttieude'];
             $ngaytao=$_POST['txtngaytao'];
+            
+            $hinhanh=$_FILES['txtHinhanh']['name'];
+            echo $hinhanh;
+            $target_dir = "upload/";
+
+            $target_file = $target_dir . basename($_FILES["txtHinhanh"]["name"]);
+            if (move_uploaded_file($_FILES["txtHinhanh"]["tmp_name"], $target_file)) {
+                 echo "The file ". htmlspecialchars( basename( $_FILES["txtHinhanh"]["name"])). " has been uploaded.";
+              } else {
+                 echo "Sorry, there was an error uploading your file.";
+              }
            
             
             // Kiem tra trung id
@@ -30,7 +41,7 @@
             }
             else{
                     // gọi hàm chèn dl tintuc_ins trong model tacgia_m
-            $kq=$this->tintuc->tintuc_ins($id,$noidung,$tieude,$ngaytao);
+            $kq=$this->tintuc->tintuc_ins($id,$noidung,$tieude,$ngaytao,$hinhanh);
             if($kq){
                 echo '<script>
                 alert("Thêm mới thành công");
@@ -44,16 +55,7 @@
                 echo'<script>alert("Thêm mới thất bại")</script>';
             }
            
-            // gọi lại giao diện
-            // $this->view('Masterlayout',[
-            //     'page'=>'tintuc_them',
-            //     'id'=> $id,
-            //     'email'=>$email,
-            //     'quyen'=> $tdn,
-            //     'matkhau'=> $mk,
-            //     'ngaytao'=> $nt,
-                
-            // ]);
+           
         }
     }
     function upload(){
@@ -70,9 +72,9 @@
                 $noidung=$sheetData[$i]["B"];
                 $tieude=$sheetData[$i]["C"];
                 $ngaytao=$sheetData[$i]["D"];
-                // $sdt=$sheetData[$i]["E"];
+                $hinhanh=$sheetData[$i]["E"];
                 // $ngaysinh=$sheetData[$i]["F"];
-                $this->tintuc->tintuc_ins($id,$noidung,$tieude,$ngaytao);
+                $this->tintuc->tintuc_ins($id,$noidung,$tieude,$ngaytao,$hinhanh);
             }
             echo '<script>
                 alert("Thêm mới thành công");

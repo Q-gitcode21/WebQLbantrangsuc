@@ -43,7 +43,7 @@
         $sheet->setCellValue('B'.$rowCount,'Noidung');
         $sheet->setCellValue('C'.$rowCount,'Tieude');
         $sheet->setCellValue('D'.$rowCount,'Ngaytao');
-        // $sheet->setCellValue('E'.$rowCount,'Matkhau');
+        $sheet->setCellValue('E'.$rowCount,'Hinhanh');
         // $sheet->setCellValue('F'.$rowCount,'Ngaytao');
     
         //định dạng cột tiêu đề
@@ -51,12 +51,12 @@
         $sheet->getColumnDimension('B')->setAutoSize(true);
         $sheet->getColumnDimension('C')->setAutoSize(true);
         $sheet->getColumnDimension('D')->setAutoSize(true);
-        // $sheet->getColumnDimension('E')->setAutoSize(true);
+        $sheet->getColumnDimension('E')->setAutoSize(true);
         // $sheet->getColumnDimension('F')->setAutoSize(true);
         //gán màu nền
-        $sheet->getStyle('A1:D1')->getFill()->setFillType(\PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setRGB('00FF00');
+        $sheet->getStyle('A1:E1')->getFill()->setFillType(\PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setRGB('00FF00');
         //căn giữa
-        $sheet->getStyle('A1:D1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+        $sheet->getStyle('A1:E1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
         //Điền dữ liệu vào các dòng. Dữ liệu lấy từ DB
         $tieude=$_POST['txtTKTD']; 
         $noidung=$_POST['txtTKND']; // lay du lieu nhap tu txt      
@@ -69,7 +69,7 @@
             $sheet->setCellValue('B'.$rowCount,$row['Noidung']);
             $sheet->setCellValue('C'.$rowCount,$row['Tieude']);
             $sheet->setCellValue('D'.$rowCount,$row['Ngaytao']);
-            // $sheet->setCellValue('F'.$rowCount,$row['Ngaytao']);
+            $sheet->setCellValue('E'.$rowCount,$row['Hinhanh']);
             
            
            
@@ -83,7 +83,7 @@
                 )
             )
             );
-        $sheet->getStyle('A1:'.'D'.($rowCount))->applyFromArray($styleAray);
+        $sheet->getStyle('A1:'.'E'.($rowCount))->applyFromArray($styleAray);
         $objWriter=new PHPExcel_Writer_Excel2007($objExcel);
         $fileName='ExportExcel.xlsx';
         $objWriter->save($fileName);
@@ -125,21 +125,33 @@
             $noidung=$_POST['txtnoidung'];
             $tieude=$_POST['txttieude'];
             $ngaytao=$_POST['txtngaytao'];
+            $hinhanh=$_FILES['txtHinhanh']['name']; 
+            $target_dir = "upload/";
+    
+            $target_file = $target_dir . basename($_FILES["txtHinhanh"]["name"]);
+            if (move_uploaded_file($_FILES["txtHinhanh"]["tmp_name"], $target_file)) {
+                 echo "The file ". htmlspecialchars( basename( $_FILES["txtHinhanh"]["name"])). " has been uploaded.";
+              } else {
+                 echo "Sorry, there was an error uploading your file.";
+              }
             
                     // gọi hàm chèn dl tacgia_ins trong model tacgia_m
-            $kq=$this->dstt->tintuc_upd($id,$noidung,$tieude,$ngaytao);
+            $kq=$this->dstt->tintuc_upd($id,$noidung,$tieude,$ngaytao,$hinhanh);
             if($kq){
                 echo'<script>alert("Sửa thành công")</script>';
+                echo '<script>
+                window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSTintuc";
+                    </script>';
             }
             else{
                 echo'<script>alert("Sửa thất bại")</script>';
             }
             
             // gọi lại giao diện
-            $this->view('Masterlayout',[
-                'page'=>'DStintuc_v',
-                'dulieu'=>$this->dstt->tintuc_find('','')
-            ]);
+            // $this->view('Masterlayout',[
+            //     'page'=>'DStintuc_v',
+            //     'dulieu'=>$this->dstt->tintuc_find('','')
+            // ]);
            
         }
     }

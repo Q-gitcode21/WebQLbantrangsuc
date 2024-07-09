@@ -16,7 +16,7 @@
             $makm=$_POST['txtmakhuyenmai'];
             $mota=$_POST['txtmota'];
             $giatri=$_POST['txtgiatri'];
-            $giatriphantram=$_POST['txtGiatriphantram'];
+            $soluong=$_POST['txtsoluong'];
            
             
             // Kiem tra trung id
@@ -31,7 +31,7 @@ khuyenmai";
             }
             else{
                     // gọi hàm chèn dl khuyenmai_ins trong model tacgia_m
-            $kq=$this->khuyenmai->khuyenmai_ins($makm,$mota,$giatri,$giatriphantram);
+            $kq=$this->khuyenmai->khuyenmai_ins($makm,$mota,$giatri,$soluong);
             if($kq){
                 echo '<script>
                 alert("Thêm mới thành công");
@@ -71,10 +71,10 @@ khuyenmai";
                 $makm=$sheetData[$i]["A"];
                 $mota=$sheetData[$i]["B"];
                 $giatri=$sheetData[$i]["C"];
-                $giatriphantram=$sheetData[$i]["D"];
+                $soluong=$sheetData[$i]["D"];
                 // $sdt=$sheetData[$i]["E"];
                 // $ngaysinh=$sheetData[$i]["F"];
-                $this->khuyenmai->khuyenmai_ins($makm,$mota,$giatri,$giatriphantram);
+                $this->khuyenmai->khuyenmai_ins($makm,$mota,$giatri,$soluong);
             }
             echo '<script>
                 alert("Thêm mới thành công");

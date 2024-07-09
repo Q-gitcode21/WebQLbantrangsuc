@@ -71,6 +71,7 @@
                         <th> Nội dung <span class=""></span></th>
                         <th> Tiêu đề <span class=""></span></th>
                         <th> Ngày tạo <span class=""></span></th>
+                        <th> Hình ảnh <span class="icon-arrow">&UpArrow;</span></th>
                         
                         <th style="padding-left:50px"> Chức năng <span class="icon-arrow">&UpArrow;</span></th>
                     </tr>
@@ -90,7 +91,19 @@
                                             <td> <?php echo $row['Noidung']?> </td>
                                             <td> <?php echo $row['Tieude']?> </td>
                                             <td> <?php echo $row['Ngaytao']?> </td>
-                                            
+                                            <td>
+                                            <?php
+                                        $hinhanhpath = "./upload/" . $row['Hinhanh'];
+                                       
+                                        if (is_file($hinhanhpath)) {
+                                            $hinhanh = "<img src='http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD" . $hinhanhpath . "' width='200px'>";
+                                            echo $hinhanh;
+                                        } else {
+                                            $hinhanh = "no photo";
+                                           
+                                        }
+                                                    ?>
+                                            </td>
                                            
                                            
                                             <td class="btn_cn">

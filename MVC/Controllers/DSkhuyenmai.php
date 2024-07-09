@@ -41,7 +41,7 @@
         $sheet->setCellValue('A'.$rowCount,'MaKM');
         $sheet->setCellValue('B'.$rowCount,'Mota');
         $sheet->setCellValue('C'.$rowCount,'Giatri');
-        $sheet->setCellValue('D'.$rowCount,'Giatriphantram');
+        $sheet->setCellValue('D'.$rowCount,'Soluong');
         // $sheet->setCellValue('E'.$rowCount,'Matkhau');
         // $sheet->setCellValue('F'.$rowCount,'Ngaytao');
     
@@ -67,7 +67,7 @@
             $sheet->setCellValue('A'.$rowCount,$row['MaKM']);
             $sheet->setCellValue('B'.$rowCount,$row['Mota']);
             $sheet->setCellValue('C'.$rowCount,$row['Giatri']);
-            $sheet->setCellValue('D'.$rowCount,$row['Giatriphantram']);
+            $sheet->setCellValue('D'.$rowCount,$row['Soluong']);
             // $sheet->setCellValue('F'.$rowCount,$row['Ngaytao']);
             
            
@@ -123,10 +123,10 @@
             $makm=$_POST['txtmakhuyenmai'];
             $mota=$_POST['txtmota'];
             $giatri=$_POST['txtgiatri'];
-            $giatriphantram=$_POST['txtGiatriphantram'];
+            $soluong=$_POST['txtsoluong'];
             
                     // gọi hàm chèn dl tacgia_ins trong model tacgia_m
-            $kq=$this->dskm->khuyenmai_upd($makm,$mota,$giatri,$giatriphantram);
+            $kq=$this->dskm->khuyenmai_upd($makm,$mota,$giatri,$soluong);
             if($kq){
                 echo'<script>alert("Sửa thành công")</script>';
             }

@@ -1,8 +1,8 @@
 <!-- truy van sql -->
 <?php 
 class khuyenmai_m extends connectDB{
-    function khuyenmai_ins($makm,$mota,$giatri,$giatriphantram){
-        $sql="INSERT INTO qlkhuyenmai VALUES ('$makm','$mota','$giatri','$giatriphantram')";
+    function khuyenmai_ins($makm,$mota,$giatri,$soluong){
+        $sql="INSERT INTO qlkhuyenmai VALUES ('$makm','$mota','$giatri','$soluong')";
          return mysqli_query($this->con,$sql);
         
     }
@@ -30,8 +30,8 @@ class khuyenmai_m extends connectDB{
         $sql="DELETE FROM qlkhuyenmai WHERE MaKM='$makm'";
         return mysqli_query($this->con,$sql);
     }
-    function khuyenmai_upd($makm,$mota,$giatri,$giatriphantram){
-        $sql="UPDATE qlkhuyenmai SET Mota ='$mota',Giatri ='$giatri',Giatriphantram ='$giatriphantram' 
+    function khuyenmai_upd($makm,$mota,$giatri,$soluong){
+        $sql="UPDATE qlkhuyenmai SET Mota ='$mota',Giatri ='$giatri',Soluong ='$soluong' 
         WHERE MaKM='$makm'";
         
         return mysqli_query($this->con,$sql);

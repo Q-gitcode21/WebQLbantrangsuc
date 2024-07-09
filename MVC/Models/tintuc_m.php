@@ -1,8 +1,8 @@
 <!-- truy van sql -->
 <?php 
 class tintuc_m extends connectDB{
-    function tintuc_ins($id,$noidung,$tieude,$ngaytao){
-        $sql="INSERT INTO qltintuc VALUES ('$id','$noidung','$tieude','$ngaytao')";
+    function tintuc_ins($id,$noidung,$tieude,$ngaytao,$hinhanh){
+        $sql="INSERT INTO qltintuc VALUES ('$id','$noidung','$tieude','$ngaytao','$hinhanh')";
          return mysqli_query($this->con,$sql);
         
     }
@@ -30,10 +30,18 @@ class tintuc_m extends connectDB{
         $sql="DELETE FROM qltintuc WHERE Id='$id'";
         return mysqli_query($this->con,$sql);
     }
-    function tintuc_upd($id,$noidung,$tieude,$ngaytao){
-        $sql="UPDATE qltintuc SET Noidung ='$noidung',Tieude ='$tieude',Ngaytao ='$ngaytao' 
+    function tintuc_upd($id,$noidung,$tieude,$ngaytao,$hinhanh){
+        if($hinhanh!=""){
+            $sql="UPDATE qltintuc SET Noidung ='$noidung',Tieude ='$tieude',Ngaytao ='$ngaytao',Hinhanh ='$hinhanh'
         WHERE Id='$id'";
-        return mysqli_query($this->con,$sql);
+            echo $sql;
+        }
+        else{
+            $sql="UPDATE qltintuc SET Noidung ='$noidung',Tieude ='$tieude',Ngaytao ='$ngaytao'
+        WHERE Id='$id'";
+
+        }return mysqli_query($this->con,$sql);
+
     }
     
 }

@@ -73,7 +73,7 @@ khuyenmai" method="post">
                         <th> Mã KM <span class=""></span></th>
                         <th> Mô tả <span class=""></span></th>
                         <th> Giá trị(tiền mặt) <span class=""></span></th>
-                        <th> Giá trị(%) <span class=""></span></th>
+                        <th> Số lượng <span class=""></span></th>
                         
                         <th style="padding-left:50px"> Chức năng <span class="icon-arrow">&UpArrow;</span></th>
                     </tr>
@@ -92,7 +92,7 @@ khuyenmai" method="post">
                                             </td>
                                             <td> <?php echo $row['Mota']?> </td>
                                             <td> <?php echo $row['Giatri']?> </td>
-                                            <td> <?php echo $row['Giatriphantram']?> </td>
+                                            <td> <?php echo $row['Soluong']?> </td>
                                             
                                            
                                            

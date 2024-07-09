@@ -89,9 +89,9 @@
                     </a>
                     <ul id="QLGD-DH" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
 
-                        <li class="sidebar-item">
+                        <!-- <li class="sidebar-item">
                             <a href="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSDathang" class="sidebar-link">Đặt hàng</a>
-                        </li>
+                        </li> -->
 
                         <li class="sidebar-item">
                             <a href="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSDonhang" class="sidebar-link">Đơn hàng</a>

@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Public/CSS/style.css?v=<?php echo time();?>">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css' />
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' />
-    <script src="https://kit.fontawesome.com/10f350194a.js" crossorigin="anonymous"></script>
+ 
    
 </head>
 
@@ -101,10 +101,6 @@
 
                                    
                                 </div>
-                                <div class="cart_infor">
-                                    <a href="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Ctdonhang"><i class="fa-solid fa-box"></i><span class="cart_text_quantity">
-                                            </span><i class="ion-chevron-down"></i></a>
-                                    <span class="cart_quantity"></span>
                             </div>
                         </div>
                     </div>
@@ -173,47 +169,46 @@
         <!-- slider section ends -->
         <!-- banner section starts -->
         <section class="banner_section banner_black">
-            
             <div class="container">
                 <div class="row">
-                <?php
-                                // Kết nối đến cơ sở dữ liệu
-                                $conn = mysqli_connect('localhost','root','','qlbanhang') ;
-
-                                // Truy vấn dữ liệu
-                                $query = "SELECT Noidung, Tieude, Hinhanh FROM qltintuc LIMIT 3";
-                                $result = mysqli_query($conn, $query);
-                                while ($row = $result->fetch_assoc()):
-                                    ?>
                     <div class="col-lg-4 col-md-6">
-                        
                         <div class="single_banner">
                             <div class="banner_thumb">
-                                <a href="#"><?php
-                                                            $hinhanhpath = "upload/" . $row['Hinhanh'];
-                                                            
-                                                            if (is_file($hinhanhpath)) {
-                                                                $hinhanh = "<img src='http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/" . $hinhanhpath . "' width='300px' '''>";
-                                                                echo $hinhanh;
-                                                            } else {
-                                                                $hinhanh = "no photo";
-                                                            
-                                                            }
-                                                                        ?></a>
+                                <a href="#"><img src="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Public/Picture/images/banner/bg-1.jpg" alt="banner1"></a>
                                 <div class="banner_content">
-                                
-                                    <?php
-                                // Hiển thị dữ liệu
-                                echo "<p>" . $row['Tieude'] . "</p>";
-                                echo "<h2>" . $row['Noidung'] . "</h2>";
-                            ?>
-                            
+                                    <p>Thiết kế mới</p>
+                                    <h2>Nhẫn tạo tác nhỏ</h2>
+                                    <span>Sale 20% </span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <?php endwhile; ?>
-                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single_banner">
+                            <div class="banner_thumb">
+                                <a href="#"><img src="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Public/Picture/images/banner/bg-2.jpg" alt="banner2"></a>
+                                <div class="banner_content">
+                                    <p>Bán chạy nhất</p>
+                                    <h2>Nhẫn kim cương</h2>
+                                    <span>Sale 10% </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single_banner">
+                            <div class="banner_thumb">
+                                <a href="#"><img src="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Public/Picture/images/banner/bg-3.jpg" alt="banner3"></a>
+                                <div class="banner_content">
+                                    <p>Sản phẩm nổi bật</p>
+                                    <h2>Nhẫn Platinium</h2>
+                                    <span>Sale 30% </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- banner section ends -->
         <!-- product section area starts  -->

@@ -24,7 +24,7 @@
             $dvvc=$_POST['selectDonvivanchuyen'];            
             $tt=$_POST['selectTrangthai'];
             $mdh=trim($mdh);
-             // Convert dates to timestamps for comparison
+             // chuyển đổi kiểu dữ liệu sang Timestamp
             $ndhTimestamp = strtotime($ndh);
             $nnhTimestamp = strtotime($nnh);
     
@@ -33,7 +33,7 @@
             alert("Ngày nhận hàng không thể trước ngày đặt hàng");
              window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DSDonhang";
             </script>';
-            exit(); // Stop further execution
+            exit(); 
         }
            
             else{
@@ -48,7 +48,7 @@
                 </script>';
             }
             else{
-                     // gọi hàm chèn dl giaohang_ins trong model tacgia_m
+                     
             $kq=$this->giaohang->giaohang_ins($mdh,$ndh,$nnh,$dvvc,$tt);
             if($kq){
                 $uptt=$this->giaohang->update_trangthai($mdh,$tt);

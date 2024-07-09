@@ -45,8 +45,8 @@ Public/CSS/dulieu.css">
                 <div class="input-box">
                     <span class="icon">
                     </span>
-                    <input type="text" required name="txtGiatriphantram" value="<?php if(isset($data['Giatriphantram'])) echo $data['Giatriphantram']?>">
-                    <label>Giá trị %</label>
+                    <input type="text" required name="txtsoluong" value="<?php if(isset($data['Soluong'])) echo $data['Soluong']?>">
+                    <label>Số lượng</label>
                 </div>
                 
                 <button type="submit" class="btn" name="btnLuu">Lưu</button>

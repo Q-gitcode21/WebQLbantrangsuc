@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Public/CSS/dulieu.css">
 </head>
 <body>
-    <form method="post" action="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DStintuc/suadl">
+    <form method="post" action="http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/DStintuc/suadl" enctype="multipart/form-data" >
     <div class="content">
     <?php
             if (isset($data['dulieu']) && mysqli_num_rows($data['dulieu'])>0){
@@ -45,6 +45,27 @@
                     </span>
                     <input type="date" required name="txtngaytao" value="<?php  echo $row['Ngaytao']?>" >
                     <label>Ngày tạo</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon">
+                        <img src="./Public/Picture/Pic_login/user.png" alt="" width="15px">
+                    </span>
+                    <?php
+                        $hinhanhpath = "upload/" . $row['Hinhanh'];
+                                                            
+                        if (is_file($hinhanhpath)) {
+                            $hinhanh = "<img src='http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/" . $hinhanhpath . "' width='200px'>";
+                        } else {
+                            $hinhanh = "no photo";
+                            
+                        }
+                        ?>
+                    <input type="file" name="txtHinhanh">
+                    <?=$hinhanh?>
+
+                    <label>Hình ảnh</label>
+
                 </div>
                 
                 <br>

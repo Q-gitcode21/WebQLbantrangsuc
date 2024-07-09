@@ -20,9 +20,7 @@
             $email=$_POST['txtEmail'];
             $mst=$_POST['txtMasothue'];
             
-            // Kiem tra trung id
-            // $kq1=$this->nhacungcap->checktrungid($tenncc);
-            // ko cần vì để khóa tự động
+          
             
             
                     // gọi hàm chèn dl nhacungcap_ins trong model tacgia_m

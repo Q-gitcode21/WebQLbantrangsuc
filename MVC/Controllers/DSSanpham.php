@@ -131,6 +131,7 @@
             $gia=$_POST['txtGia'];
             $soluong=$_POST['txtSoluong'];
             $mota=$_POST['txtMota'];
+           
             $hinhanh=$_FILES['txtHinhanh']['name'];
             $target_dir = "upload/";
     

@@ -45,8 +45,8 @@ DSkhuyenmai/suadl">
                     <span class="icon">
                     <img src="./Public/Picture/Pic_login/khoa.png" alt="" width="15px">
                     </span>
-                    <input type="int" required name="txtGiatriphantram" value="<?php  echo $row['Giatriphantram']?>" >
-                    <label>Giá trị %</label>
+                    <input type="varchar" required name="txtsoluong" value="<?php  echo $row['Soluong']?>" >
+                    <label>Số lượng</label>
                 </div>
                 
                 <br>

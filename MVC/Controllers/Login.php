@@ -48,11 +48,11 @@ class Login extends controller{
                         exit();
                     } 
                     elseif ($quyen == 'Nhân viên') {
-                        // Gọi đến trang quản lý
-                        $doanhthu=$this->Login->doanhthungay();
-                        $this->view('Masterlayout',['page'=>'Trangchu_v', 'dulieu'=>$doanhthu,'id'=>$id]);
-                        $result_mess=true;
-                        exit();
+                       
+                        echo '<script>
+                        alert("Đăng nhập thành công");
+                        window.location.href = "http://localhost/Web%20qu%E1%BA%A3n%20l%C3%BD/Trangchu";
+                        </script>';
                     }
                     else{
                         echo 'Không xác định đc quyền';
